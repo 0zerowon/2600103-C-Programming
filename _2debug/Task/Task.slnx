@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="Task/Task.vcxproj" Id="2d21d0bb-a70d-484b-9284-845b50bae66f" />
+  <Project Path="Test/Test.vcxproj" Id="73fc7d57-1004-4708-abd6-13f568320dcb" />
 </Solution>
