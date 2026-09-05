@@ -37,7 +37,7 @@ printf("%zu\n", sizeof(pi));
 printf("%zu\n", sizeof(pc));
 printf("%zu\n", sizeof(pd));
 ```
-- 문자열을 출력하는 printf 함수를 3번 사용하여, 각각 pi, pc, pd를 sizeof 연산자의 피연산자로, 연산자 sizeof가 반환하는 size_t를 서식 문자열 %zu로 포인터 크기를 32비트, 64비트 디버거 플랫폼에 따라 각각 4, 8 출력 후, 이스케이프 시퀀스 \n로 개행
+- 문자열을 출력하는 printf 함수를 3번 사용하여, 각각 pi, pc, pd를 sizeof 연산자의 피연산자로, 연산자 sizeof가 반환하는 size_t를 서식 문자열 %zu로 포인터 크기를 32비트, 64비트 디버거 플랫폼에 따라 각각 4, 8 출력 후, 이스케이프 시퀀스 \n으로 개행
 
 <br>
 
