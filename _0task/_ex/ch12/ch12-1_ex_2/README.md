@@ -43,8 +43,6 @@ printf("%zu\n", sizeof(pd));
 
 # 실행 결과
 
-- 실행 할 때마다 결과가 상이할 수 있음
-
 <br>
 
 <img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/d051a95e-51d0-40ad-8b03-d0a623a7f4d2" />
