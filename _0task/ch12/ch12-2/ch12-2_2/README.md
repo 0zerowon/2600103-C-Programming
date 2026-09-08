@@ -37,4 +37,4 @@ printf("double형 변수 c의 값은: %.2f\n", *&c);
 
 # 실행 결과
 
-
+<img width="1483" height="762" alt="image" src="https://github.com/user-attachments/assets/1e8318e7-4b4c-4b84-9678-7c49f986970a" />
