@@ -30,5 +30,13 @@
     <ClCompile Include="ch12-2_5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch12-2_5_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
