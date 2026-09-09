@@ -33,8 +33,6 @@ printf("double형 변수 c의 값은: %.2f\n", *&c);
 	- 서식 문자열을 각각 %d, %c, %.2f로 출력, 이스케이프 시퀀스 \n로 개행하고
   - 각각 두 번째 인자로 주소 연산자를 사용하고 간접 참조 연산자를 사용하여 각각의 서식 문자열에 해당하는 a, b, c를 출력
 
-<br>
-
 # 실행 결과
 
 <img width="1483" height="762" alt="image" src="https://github.com/user-attachments/assets/1e8318e7-4b4c-4b84-9678-7c49f986970a" />
