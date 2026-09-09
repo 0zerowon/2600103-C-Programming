@@ -1,27 +1,24 @@
-#pragma warning(disable:6031)
-
-#define _CRT_SECURE_NO_WARNINGS
-
-#define EXE_RATE 3.141592
-
 #include <stdio.h>
 
-int main()
+int main() 
 {
-    int userExpPacket = 0;
-    double userExpRate = 0.0;
+    int a = 9, b = 10;
+    int* p_a = &a;
+    int* p_b = &b;
 
-    int userContrib = 0;
+    printf("a: %d, b: %d\n", a, b);
+    printf("&a: %p, &b: %p\n", &a, &b);
 
-    int* pExpPacket = &userExpPacket;
-    double* pExpRate = &userExpRate;
+    *p_a = *p_b;
+    p_a = p_b;
+    (*p_a)++;
 
-    printf("유저의 기여도에 따라 exp 비율 결정(10-100): ");
-    scanf("%d", &userContrib);
+    if (*&p_b == p_a)
+    {
+        printf("*&p_b == p_a\n");
+    }
 
-    *pExpPacket = EXE_RATE * userContrib;
-    *pExpRate = (double)*pExpPacket / userContrib;
+    printf("a: %d, b: %d\n", a, b);
+    printf("p_a: %p, p_b: %p\n", p_a, p_b);
 
-    printf("전송된 정수 exp 패킷 값: %d\n", *pExpPacket);
-    printf("복원된 실수 exp 값: %f\n", *pExpRate);
 }
