@@ -69,3 +69,4 @@ printf("p_a: %p, p_b: %p\n", p_a, p_b);
   - 각각 두 번째 인자로 서식 문자열의 %d에 해당하는 a, b와 %p에 해당하는 p_a, p_b 출력
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/29b86df9-4914-4eb8-8e50-49b189a48044" />
