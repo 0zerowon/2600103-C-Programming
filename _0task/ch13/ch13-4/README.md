@@ -44,7 +44,7 @@ float* ptrArr = arr;
 ```c
 for (int i = 0; i < 5; i++)
 {
-		printf("arr[%d] 초기화: ", i);
+	printf("arr[%d] 초기화: ", i);
 	scanf("%f", ptrArr++);
 }
 ```
