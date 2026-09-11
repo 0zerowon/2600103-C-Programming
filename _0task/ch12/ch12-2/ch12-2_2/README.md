@@ -1,3 +1,18 @@
+- 아래 코드에서 변수 이름을 사용하지 말고 포인터를 사용하여 같은 결과가 나오도록 코드를 수정하시오(예제 1번 참조)
+```c
+#include <stdio.h>
+int main(void)
+{
+	int a = 100;
+	char b = 'A';
+	double c = 3.14;
+	printf(int형 변수 a의 값은: %d\n", a);
+	printf(char형 변수 b의 값은: %c\n", b);
+	printf("double형 변수 c의 값은: %lf\n", c);
+	return 0;
+}
+```
+
 # 소스 코드 설명
 
 ```c

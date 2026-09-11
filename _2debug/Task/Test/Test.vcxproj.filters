@@ -33,6 +33,12 @@
     <ClCompile Include="ch12-2_5_1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch13-1_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13-1_3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf">

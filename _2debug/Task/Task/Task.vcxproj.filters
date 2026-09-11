@@ -27,5 +27,11 @@
     <ClCompile Include="ch12-2_2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch13-1_5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13-1_4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
