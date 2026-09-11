@@ -157,7 +157,7 @@ printf("%.1f ", ptrArr[i]);
   - 각 반복마다 ptrArr[i]가 가리키는 arr[i]를 소수점 첫째 자리까지 출력
 
 ## 증감 연산자를 이용한 포인터 주소 연산 방식
-- ch13-1_4 폴더 README.md
+- [ch13-1_4 폴더 README.md](https://github.com/0zerowon/2600103-C-Programming/tree/main/_0task/ch13/ch13-1/ch13-1_4#%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EC%84%A4%EB%AA%85)
 
 # 실행 결과
 <img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/f16b9598-bcfd-49bb-b347-c27769d1c192" />
