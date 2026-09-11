@@ -81,3 +81,4 @@ printf("}\n");
 - 문자열 "}\n" 출력
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/f16b9598-bcfd-49bb-b347-c27769d1c192" />
