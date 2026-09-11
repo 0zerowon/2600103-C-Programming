@@ -13,18 +13,18 @@ int main(void)
 	for (int i = 0; i < 5; i++)
 	{
 		printf("arr[%d] ÃÊ±âÈ­: ", i);
-		scanf("%f", &ptrArr[i]);
+		scanf("%f", ptrArr + i);
 	}
 
 	for (int i = 0; i < 5; i++)
 	{
-		ptrArr[i] += 2;
+		*(ptrArr + i) += 2;
 	}
 
 	printf("\nfloat arr[5] = { ");
 	for (int i = 0; i < 5; i++)
 	{
-		printf("%.1f ", ptrArr[i]);
+		printf("%.1f ", *(ptrArr + i));
 	}
 	printf("}\n");
 
