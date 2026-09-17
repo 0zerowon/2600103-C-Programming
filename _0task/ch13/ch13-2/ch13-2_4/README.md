@@ -6,3 +6,8 @@
 문자열을 입력하시오: world\n
 사전에서 앞에 나오는 문자열: hello
 ```
+
+# 소스 코드 설명
+
+# 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/83b7d4b1-ed17-42af-8dcf-c6ce844c1920" />
