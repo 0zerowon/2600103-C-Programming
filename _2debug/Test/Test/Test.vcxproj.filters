@@ -21,7 +21,16 @@
     <ClCompile Include="ch13-1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ch13-1_11.c">
+    <ClCompile Include="ch13-1_ex_11.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13-2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13-2_ex_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch13-2_ex_5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

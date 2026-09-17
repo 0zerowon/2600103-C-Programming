@@ -5,14 +5,14 @@ int main(void)
 	int sum = 0, i, average;
 	for (i = 0; i < 5; i++)
 	{
-		printf("¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½: ");
 		scanf_s("%d", grade + i);
 	}
 	for (i = 0; i < 5; i++)
 		sum += *(grade + i);
 
 	average = sum / 5.0;
-	printf("¼ºÀû Æò±Õ= %d\n", average);
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½= %d\n", average);
 
 	return 0;
 }
