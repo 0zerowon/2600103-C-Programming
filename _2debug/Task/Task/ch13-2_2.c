@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 
 #pragma warning(disable:6031)
 
@@ -8,7 +8,6 @@
 int main()
 {
 	char s[11];
-	int i = 0;
 
 	printf("문자열을 입력하시오: ");
 	scanf("%s", s);

@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 
 #pragma warning(disable:6031)
 
@@ -15,16 +15,16 @@ int main()
 
 	for (int i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] > s[i] + ('A' + 'a'))
+		if (s[i] >= 'A' && s[i] <= 'Z')			// 대문자
 		{
-			s[i] -= ('a' - 'A');
+			s[i] += ('a' - 'A');
 
 		}
-		else
+		else if (s[i] >= 'a' && s[i] <= 'z')	// 소문자
 		{
-			s[i] += ('A' + 'a');
+			s[i] -= ('a' - 'A');
 		}
 	}
-	// 흠
+
 	printf("%s", s);
 }
