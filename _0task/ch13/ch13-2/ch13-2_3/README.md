@@ -78,3 +78,4 @@ printf("%s", s);
 - 변환된 문자열 출력
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/e32d88ac-41f8-429f-9766-d8b29fe3e5e3" />
