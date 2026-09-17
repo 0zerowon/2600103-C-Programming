@@ -63,3 +63,4 @@ for (int i = 0; s[i] != '\0'; i++)
 	- 문자열의 끝을 널문자로 판단
 
 # 출력 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/25222d17-6bca-4986-abc9-06cdf364689f" />
