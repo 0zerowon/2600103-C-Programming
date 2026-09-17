@@ -4,10 +4,10 @@
 
 #include <stdio.h>
 
-char s[11];
 
 int main()
 {
+	char s[11];
 	int i = 0;
 
 	printf("문자열을 입력하시오: ");
