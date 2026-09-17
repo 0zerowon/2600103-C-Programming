@@ -9,3 +9,8 @@ int main(void)
 	return 0;
 }
 ```
+
+# 소스 코드 설명
+
+# 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/977d55dd-918b-4a18-930f-dbd30a047f6f" />
