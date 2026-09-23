@@ -137,3 +137,5 @@ printf("swap 함수 호출 후 x = %d, y = %d, z = %d\n", *px, *py, *pz);
 
 # 실행 결과
 <img width="1363" height="762" alt="image" src="https://github.com/user-attachments/assets/bf7d0fca-eeb8-4c27-986e-f6d8fb9921a5" />
+
+- 한글 깨짐
