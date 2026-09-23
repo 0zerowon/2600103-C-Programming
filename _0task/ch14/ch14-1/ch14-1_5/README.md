@@ -1,60 +1,60 @@
-- ±³Àç 320ÆäÀÌÁö ¹®Á¦ 1¹øÀ» Çª½Ã¿À.
-	- ´Ü, num º¯¼ö¿¡ ÀúÀåµÈ °ªÀ» 100¹è ÇÏ´Â ÇÔ¼ö·Î ¼öÁ¤ÇÏ¶ó.
-- ÇÔ¼öÀÇ ¼±¾ğ, È£Ãâ, Á¤ÀÇ¸¦ ¸ğµÎ »ç¿ëÇÒ °Í
-- 2°¡Áö ¹æ½ÄÀÇ Â÷ÀÌ¸¦ ¼³¸íÇÏ°í ¿øÇÏ´Â °á°ú´Â ¾î´À °ÍÀÎ°¡?
+- êµì¬ 320í˜ì´ì§€ ë¬¸ì œ 1ë²ˆì„ í‘¸ì‹œì˜¤.
+	- ë‹¨, num ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ì„ 100ë°° í•˜ëŠ” í•¨ìˆ˜ë¡œ ìˆ˜ì •í•˜ë¼.
+- í•¨ìˆ˜ì˜ ì„ ì–¸, í˜¸ì¶œ, ì •ì˜ë¥¼ ëª¨ë‘ ì‚¬ìš©í•  ê²ƒ
+- 2ê°€ì§€ ë°©ì‹ì˜ ì°¨ì´ë¥¼ ì„¤ëª…í•˜ê³  ì›í•˜ëŠ” ê²°ê³¼ëŠ” ì–´ëŠ ê²ƒì¸ê°€?
 
-# ¼Ò½º ÄÚµå ¼³¸í
+# ì†ŒìŠ¤ ì½”ë“œ ì„¤ëª…
 
 ```c
 #define _CRT_SECURE_NO_WARNINGS
 
 #pragma warning(disable:6031)
 ```
-- scanf »ç¿ëÇÏ±â À§ÇØ visual studio º¸¾È °æ°í ¹«½Ã
+- scanf ì‚¬ìš©í•˜ê¸° ìœ„í•´ visual studio ë³´ì•ˆ ê²½ê³  ë¬´ì‹œ
 
 <br>
 
 ```c
 #include <stdio.h>
 ```
-- Ç¥ÁØ ÀÔÃâ·Â ¶óÀÌºê·¯¸® Æ÷ÇÔ
+- í‘œì¤€ ì…ì¶œë ¥ ë¼ì´ë¸ŒëŸ¬ë¦¬ í¬í•¨
 
 <br>
 
 ```c
 int CallByValue(int v);
 ```
-- intÇü CallByValue ÇÔ¼ö ¼±¾ğ
-	- intÇü ¸Å°³º¯¼ö v
+- intí˜• CallByValue í•¨ìˆ˜ ì„ ì–¸
+	- intí˜• ë§¤ê°œë³€ìˆ˜ v
 
 <br>
 
 ```c
 void CallByPointer(int* v);
 ```
-- voidÇü CallByPointer ÇÔ¼ö ¼±¾ğ
-	- intÇü Æ÷ÀÎÅÍ ¸Å°³º¯¼ö v
+- voidí˜• CallByPointer í•¨ìˆ˜ ì„ ì–¸
+	- intí˜• í¬ì¸í„° ë§¤ê°œë³€ìˆ˜ v
 
 <br>
 
 ```c
 int num;
 ```
-- Àü¿ª º¯¼ö num ¼±¾ğ
+- ì „ì—­ ë³€ìˆ˜ num ì„ ì–¸
 
 <br>
 
 ```c
 int main()
 ```
-- main ÇÔ¼ö ½ÃÀÛ
+- main í•¨ìˆ˜ ì‹œì‘
 
 <br>
 
 ```c
 short usrChoose = 1;
 ```
-- shortÇü º¯¼ö usrChoose ¼±¾ğ ¹× 1·Î ÃÊ±âÈ­
+- shortí˜• ë³€ìˆ˜ usrChoose ì„ ì–¸ ë° 1ë¡œ ì´ˆê¸°í™”
 
 <br>
 
@@ -63,9 +63,9 @@ printf("Init num: ");
 scanf("%d", &num);
 printf("int num = %d;\n", num);
 ```
-- "Init num: " Ãâ·Â
-- num¿¡ ÀÔ·Â °ª ÀúÀå
-- "int num = %d\n" Ãâ·Â
+- "Init num: " ì¶œë ¥
+- numì— ì…ë ¥ ê°’ ì €ì¥
+- "int num = %d\n" ì¶œë ¥
 	- '%d' == num
 
 	<br>
@@ -73,9 +73,9 @@ printf("int num = %d;\n", num);
 ```c
 while (usrChoose)
 ```
-- while¹® ½ÃÀÛ
+- whileë¬¸ ì‹œì‘
 - usrChoose == 1
-	- 0ÀÌ ¾Æ´Ï¸é ¹«ÇÑ ¹İº¹
+	- 0ì´ ì•„ë‹ˆë©´ ë¬´í•œ ë°˜ë³µ
 
 	<br>
 
@@ -83,10 +83,10 @@ while (usrChoose)
 printf("\n0: Exit / 1: Call by Value / 2: Call by Pointer / 3: Assign num / 4: Print num\n");
 scanf("%hd", &usrChoose);
 ```
-- "\n0: Exit / 1: Call by Value / 2: Call by Pointer / 3: Assign num / 4: Print num\n" Ãâ·Â
-- usrChoose¿¡ ¸Ş´º ¼ıÀÚ ÀúÀå
+- "\n0: Exit / 1: Call by Value / 2: Call by Pointer / 3: Assign num / 4: Print num\n" ì¶œë ¥
+- usrChooseì— ë©”ë‰´ ìˆ«ì ì €ì¥
 	- %hd: short decimal
-		- 2¹ÙÀÌÆ® Á¤¼ö ¼­½Ä ÁöÁ¤ÀÚ
+		- 2ë°”ì´íŠ¸ ì •ìˆ˜ ì„œì‹ ì§€ì •ì
 
 		<br>
 
@@ -96,9 +96,9 @@ if (usrChoose == 1)
 	num = CallByValue(num);
 }
 ```
-- usrChoose°¡ 1ÀÌ¸é
-	- num¿¡ CallByValue()ÀÇ ¹İÈ¯°ª ´ëÀÔ
-		- numÀ» ÀÎ¼ö·Î È£Ãâ
+- usrChooseê°€ 1ì´ë©´
+	- numì— CallByValue()ì˜ ë°˜í™˜ê°’ ëŒ€ì…
+		- numì„ ì¸ìˆ˜ë¡œ í˜¸ì¶œ
 	<br>
 
 ```c
@@ -107,9 +107,9 @@ else if (usrChoose == 2)
 	CallByPointer(&num);
 }
 ```
-- À§ if¹® Á¶°ÇÀÌ ¾Æ´Ï¶ó usrChoose°¡ 2¸é
-	- CallByPointer() È£Ãâ
-		- &numÀ» ÀÎ¼ö·Î È£Ãâ
+- ìœ„ ifë¬¸ ì¡°ê±´ì´ ì•„ë‹ˆë¼ usrChooseê°€ 2ë©´
+	- CallByPointer() í˜¸ì¶œ
+		- &numì„ ì¸ìˆ˜ë¡œ í˜¸ì¶œ
 
 		<br>
 
@@ -121,10 +121,10 @@ else if (usrChoose == 3)
 	printf("num = %d;\n", num);
 }
 ```
-- À§ if¹® Á¶°ÇÀÌ ¾Æ´Ï¶ó usrChoose°¡ 3ÀÌ¸é
-	- "Assign num: " Ãâ·Â
-	- num¿¡ ÀÔ·Â °ª ÀúÀå
-	- "num = %d;\n" Ãâ·Â
+- ìœ„ ifë¬¸ ì¡°ê±´ì´ ì•„ë‹ˆë¼ usrChooseê°€ 3ì´ë©´
+	- "Assign num: " ì¶œë ¥
+	- numì— ì…ë ¥ ê°’ ì €ì¥
+	- "num = %d;\n" ì¶œë ¥
 		- '%d' == num
 
 		<br>
@@ -135,9 +135,9 @@ else
 	printf("printf(\"num = %%d\\n\", num);\nnum = %d\n", num);
 }
 ```
-- À§ if¹® Á¶°ÇÀÌ ¾Æ´Ï¶ó¸é
-	- ¿¹½Ã: usrChoose == 0 || usrChoose == 4
-	- "printf(\"num = %%d\\n\", num);\nnum = %d\n" Ãâ·Â
+- ìœ„ ifë¬¸ ì¡°ê±´ì´ ì•„ë‹ˆë¼ë©´
+	- ì˜ˆì‹œ: usrChoose == 0 || usrChoose == 4
+	- "printf(\"num = %%d\\n\", num);\nnum = %d\n" ì¶œë ¥
 		- '%d' == num
 		- '\"' == '"'
 		- '%%' == '%'
@@ -148,7 +148,7 @@ else
 ```c
 int CallByValue(int v)
 ```
-- CallByValue ÇÔ¼ö ½ÃÀÛ
+- CallByValue í•¨ìˆ˜ ì‹œì‘
 - int v = num;
 
 <br>
@@ -161,27 +161,27 @@ printf("\treturn v * 100;\n");
 printf("}\n");
 ```
 - '\t' == 0x09
-	- ¾Æ½ºÅ°ÄÚµå °ª
+	- ì•„ìŠ¤í‚¤ì½”ë“œ ê°’
 - "num = CallByValue(num);&nbsp;&nbsp;// num = v * 100;"
 <br> "int CallByValue(int v)&nbsp;&nbsp;// int v = num;"
 <br> "{"
 <br> "&nbsp;return v * 100;"
 <br> "}" 
-<br> Ãâ·Â
+<br> ì¶œë ¥
 
 	<br>
 
 ```c
 return v * 100;
 ```
-- v * 100ÀÇ °ªÀ» 
+- v * 100ì˜ ê°’ì„ 
 
 <br>
 
 ```c
 void CallByPointer(int* p)
 ```
-- CallByPointer ÇÔ¼ö ½ÃÀÛ
+- CallByPointer í•¨ìˆ˜ ì‹œì‘
 - int* p = \&num;
 
 <br>
@@ -198,7 +198,7 @@ printf("}\n");
 <br> {
 <br> &nbsp;*p *= 100;&nbsp;&nbsp;// *&num *= 100
 <br> {
-<br> Ãâ·Â
+<br> ì¶œë ¥
 
 <br>
 
@@ -206,4 +206,5 @@ printf("}\n");
 *p *= 100;
 ```
 
-# ½ÇÇà °á°ú
+# ì‹¤í–‰ ê²°ê³¼
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/46c2a855-6f21-4675-afc8-bdc9f8211575" />
