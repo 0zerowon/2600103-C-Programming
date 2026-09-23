@@ -147,25 +147,63 @@ else
 
 ```c
 int CallByValue(int v)
-{
-	printf("num = CallByValue(num);\t\t// num = v * 100;\n");
-	printf("int CallByValue(int v)\t\t// int v = num;\n");
-	printf("{\n");
-	printf("\treturn v * 100;\n");
-	printf("}\n");
+```
+- CallByValue 함수 시작
+- int v = num;
 
-	return v * 100;
-}
+<br>
 
+```c
+printf("num = CallByValue(num);\t\t// num = v * 100;\n");
+printf("int CallByValue(int v)\t\t// int v = num;\n");
+printf("{\n");
+printf("\treturn v * 100;\n");
+printf("}\n");
+```
+- '\t' == 0x09
+	- 아스키코드 값
+- "num = CallByValue(num);&nbsp;&nbsp;// num = v * 100;"
+<br> "int CallByValue(int v)&nbsp;&nbsp;// int v = num;"
+<br> "{"
+<br> "&nbsp;return v * 100;"
+<br> "}" 
+<br> 출력
+
+	<br>
+
+```c
+return v * 100;
+```
+- v * 100의 값을 
+
+<br>
+
+```c
 void CallByPointer(int* p)
-{
-	printf("CallByPointer(&num);\n");
-	printf("void CallByPointer(int* p)\t// int* p = &num;\n");
-	printf("{\n");
-	printf("\t*p *= 100;\t\t// *&num *= 100\n");
-	printf("}\n");
+```
+- CallByPointer 함수 시작
+- int* p = \&num;
 
-	*p *= 100;
-}
+<br>
+
+```c
+printf("CallByPointer(&num);\n");
+printf("void CallByPointer(int* p)\t// int* p = &num;\n");
+printf("{\n");
+printf("\t*p *= 100;\t\t// *&num *= 100\n");
+printf("}\n");
+```
+- "CallByPointer(&num);"
+<br> void CallByPointer(int* p)&nbsp;// int* p = \&num;
+<br> {
+<br> &nbsp;*p *= 100;&nbsp;&nbsp;// *&num *= 100
+<br> {
+<br> 출력
+
+<br>
+
+```c
+*p *= 100;
+```
 
 # 실행 결과
