@@ -37,6 +37,6 @@ void swap(int* px, int* py, int* pz)
 	*py = *pz;
 	*pz = tmp;
 
-	printf("swap 함수 호출 전 x = %d, y = %d, z = %d\n", *px, *py, *pz);
+	printf("swap 함수 호출 후 x = %d, y = %d, z = %d\n", *px, *py, *pz);
 
 }

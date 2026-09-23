@@ -18,7 +18,7 @@ int num;
 
 int main()
 {
-	short usrChoose;
+	short usrChoose = 1;
 
 	printf("Init num: ");
 	scanf("%d", &num);
@@ -54,7 +54,7 @@ int main()
 int CallByValue(int v)
 {
 	printf("num = CallByValue(num);\t\t// num = v * 100;\n");
-	printf("int CallByValue(int v)\t\t// int v: int v = num;\n");
+	printf("int CallByValue(int v)\t\t// int v = num;\n");
 	printf("{\n");
 	printf("\treturn v * 100;\n");
 	printf("}\n");
@@ -65,7 +65,7 @@ int CallByValue(int v)
 void CallByPointer(int* p)
 {
 	printf("CallByPointer(&num);\n");
-	printf("void CallByPointer(int* p)\t// int* p: int* p = &num;\n");
+	printf("void CallByPointer(int* p)\t// int* p = &num;\n");
 	printf("{\n");
 	printf("\t*p *= 100;\t\t// *&num *= 100\n");
 	printf("}\n");
