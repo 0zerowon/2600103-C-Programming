@@ -4,50 +4,113 @@
 
 #include <stdio.h>
 
+void Menu();
+
 int CallByValue(int v);
 
 void CallByPointer(int* v);
+
+
 
 int num;
 
 int main()
 {
-	short usrChoose;
+	Menu();
+
+	// ¿ø·¡ while¹®
+	{
+		//while (usrChoose.smallNumber)
+		//{
+		//	printf("\n");
+		//	printf("0: Exit / 1: Call by Value / 2: Call by Pointer / 3: Assign num / 4: Print num\n");
+		//	scanf("%hd", &usrChoose.smallNumber);
+
+		//	/*if (usrChoose.smallNumber == 0)
+		//	{
+		//		break;
+		//	}*/
+
+		//	if (usrChoose.smallNumber == 1)
+		//	{
+		//		num = CallByValue(num);
+		//	}
+		//	else if (usrChoose.smallNumber == 2)
+		//	{
+		//		CallByPointer(&num);
+		//	}
+		//	else if (usrChoose.smallNumber == 3)
+		//	{
+		//		printf("Assign num: ");
+		//		scanf("%d", &num);
+		//		printf("num = %d;\n", num);
+		//	}
+		//	else
+		//	{
+		//		printf("printf(\"num == %%d\\n\", num);\nnum = %d\n", num);
+		//	}
+		//}
+	}
+}
+
+void Menu()
+{
+	const char* menuItems[] = { "Exit", "Call by Value", "Call by Pointer", "Assign num", "Print num" };
+	struct SmallNumber
+	{
+		unsigned short smallNumber : 4;
+	}
+	maxOption = { .smallNumber = sizeof(menuItems) / sizeof(menuItems[0]) },
+	usrChoose = { .smallNumber = 1 };
 
 	printf("Init num: ");
 	scanf("%d", &num);
 	printf("int num = %d;\n", num);
 
-	while (1)
+	do
 	{
+
 		printf("\n");
-		printf("0: Exit / 1: Call by Value / 2: Call by Pointer / 3: Assign num / 4: Print num\n");
-		scanf("%hd", &usrChoose);
-
-		if (usrChoose == 0)
+		for (int i = 0; i <= maxOption.smallNumber; ++i)
 		{
+			if (i > 0) printf(" / ");
+			printf("%d: %s", i, menuItems[i]);
+		}
+		printf("\n");
+
+		scanf("%hd", &usrChoose.smallNumber);
+
+		if (usrChoose.smallNumber < 0 || usrChoose.smallNumber > maxOption.smallNumber)
+		{
+			int ch;
+			while ((ch = getchar()) != '\n' && ch != EOF) {}
+			usrChoose.smallNumber = -1;
+			continue;
+		}
+
+		switch (usrChoose.smallNumber)
+		{
+		case 0:
 			break;
-		}
-
-		if (usrChoose == 1)
-		{
+		case 1:
 			num = CallByValue(num);
-		}
-		else if (usrChoose == 2)
-		{
+			break;
+		case 2:
 			CallByPointer(&num);
-		}
-		else if (usrChoose == 3)
-		{
+			break;
+		case 3:
 			printf("Assign num: ");
-			scanf("%d", &num);
-			printf("num = %d;\n", num);
+			if (scanf("%d", &num) == 1)
+				printf("num = %d;\n", num);
+			break;
+		case 4:
+			printf("printf(\"num == %%d\\n\", num);\nnum = %d\n", num);
+			break;
+		default:
+			printf("Invalid selection.\n");
 		}
-		else
-		{
-			printf("printf(\"num = %%d\\n\", num);\nnum = %d\n", num);
-		}
-	}
+	} while (usrChoose.smallNumber != 0);
+
 }
 
 int CallByValue(int v)
