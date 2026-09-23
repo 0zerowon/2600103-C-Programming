@@ -20,6 +20,40 @@ int main(void)
 
 void add2(int value)
 {
-value += 2;
+	value += 2;
 }
 ```
+
+| main 함수 호출 후 add2 함수 호출 전 | -> | add2 함수 호출 및 실행 | -> | add 2 함수 종료 후 | -> | main 함수 종료 후 |
+| :---: |
+| number -> 15 || number -> 15 || number -> 15 |
+||| value -> 15 -> 17 |
+
+<br>
+
+```c
+#include <stdio.h>
+
+void add2(int value);
+
+int main(void)
+{
+	int number;
+	printf(“정수를 입력하세요:”);
+	scanf(“%d”, &number);
+	add2(&number);
+	printf(“2만큼 증가한 값:%d\n", number);
+	return0;
+}
+
+void add2(int* value)
+{
+	*value += 2;
+}
+```
+
+| main 함수 호출 후 add2 함수 호출 전 | -> | add2 함수 호출 및 실행 | -> | add 2 함수 종료 후 | -> | main 함수 종료 후 |
+| :---: |
+| number -> 15 || number -> 15 || number -> 17 |
+||| value -> &number |
+||| *value -> 17
