@@ -43,7 +43,7 @@ swap 함수 호출 후 x = 20, y = 30, z = 10
 void swap(int* px, int* py, int* pz);
 ```
 - void형 swap 함수 선언
-	- 포인터 px, py, pz를 매개변수로 받음
+	- 포인터 px, py, pz로 매개변수로 받음
 
 <br>
 

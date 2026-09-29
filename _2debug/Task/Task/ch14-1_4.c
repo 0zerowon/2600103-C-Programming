@@ -10,13 +10,13 @@ int main(void)
 {
 	int x, y, z;
 
-	printf("ì •ìˆ˜ xë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Á¤¼ö x¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &x);
-	printf("ì •ìˆ˜ yë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Á¤¼ö y¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &y);
-	printf("ì •ìˆ˜ zë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Á¤¼ö z¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &z);
-	printf("swap í•¨ìˆ˜ í˜¸ì¶œ ì „ x = %d, y = %d, z = %d\n", x, y, z);
+	printf("swap ÇÔ¼ö È£Ãâ Àü x = %d, y = %d, z = %d\n", x, y, z);
 	swap(&x, &y, &z);
 
 	return 0;
@@ -31,6 +31,6 @@ void swap(int* px, int* py, int* pz)
 	*py = *pz;
 	*pz = tmp;
 
-	printf("swap í•¨ìˆ˜ í˜¸ì¶œ ì „ x = %d, y = %d, z = %d\n", *px, *py, *pz);
+	printf("swap ÇÔ¼ö È£Ãâ Àü x = %d, y = %d, z = %d\n", *px, *py, *pz);
 
 }

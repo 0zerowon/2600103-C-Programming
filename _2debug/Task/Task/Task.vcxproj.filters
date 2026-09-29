@@ -18,5 +18,8 @@
     <ClCompile Include="..\..\..\_0task\ch14\ch14-1\ch14-1_5\ch14-1_5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch14-1_4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
