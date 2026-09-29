@@ -23,3 +23,4 @@ int main(void)
 } 
 // get_data정의
 ```
+<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/afcb67f1-1ba0-4683-90d0-182e977dcecf" />
