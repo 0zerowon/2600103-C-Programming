@@ -23,4 +23,56 @@ int main(void)
 } 
 // get_data정의
 ```
-<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/afcb67f1-1ba0-4683-90d0-182e977dcecf" />
+# 소스 코드 설명
+```c
+#define _CRT_SECURE_NO_WARNINGS
+
+#pragma warning(disable:6031)
+
+#include <stdio.h>
+
+void get_data(int* d);
+
+int main(void)
+{
+	int i, data[5];
+	get_data(data);
+	for (i = 0; i < 5; i++)
+	{
+		if (i == 2)
+		{
+			printf("...");
+			continue;
+		}
+		if (i == 3)
+		{
+			printf("\n");
+			continue;
+		}
+		printf("%d번째 data: %d\n", i + 1, data[i]);
+	}
+	return 0;
+}
+
+void get_data(int* d)
+{
+	for (int i = 0; i < 5; i++)
+	{
+		if (i == 2)
+		{
+			printf("...");
+			continue;
+		}
+		if (i == 3)
+		{
+			printf("\n");
+			continue;
+		}
+		printf("%d번째 data를 입력하시오: ", i + 1);
+		scanf("%d", d + i);
+	}
+
+}
+```
+# 실행 결과
+<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/01bfe923-e906-4ed1-9e9b-df32d8d99469" />
