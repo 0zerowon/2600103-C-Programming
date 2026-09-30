@@ -101,3 +101,4 @@ void SplitFloat(float* n, int* d, float* f)
 	- f가 가리키는 변수의 값에 n이 가리키는 변수의 값 빼기 n이 가리키는 변수의 값을 int 강제 형변환한 값 대입
 		- 실수에서 정수를 빼서 소수
 # 출력 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/7da337a3-99d1-4fd0-b7c4-5b6953510933" />
