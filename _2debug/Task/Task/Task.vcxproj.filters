@@ -24,5 +24,8 @@
     <ClCompile Include="ch14-2_3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="task\ch14\ch14-1\ch14-1_5\ch14-1_5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
