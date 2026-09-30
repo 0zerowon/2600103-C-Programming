@@ -101,5 +101,6 @@ int main()
 ```
 - main 함수 종료
 # 출력 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/73abf5e2-ad79-42e4-9c24-ad966d3a4ce5" />
 
 # 소스 코드 설명
