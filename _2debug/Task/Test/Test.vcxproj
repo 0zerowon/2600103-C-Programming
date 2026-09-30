@@ -169,6 +169,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\_0task\ch14\ch14-2\ch14-2_2\README.md" />
     <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

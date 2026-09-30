@@ -44,5 +44,8 @@
     <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf">
       <Filter>리소스 파일</Filter>
     </None>
+    <None Include="..\..\..\_0task\ch14\ch14-2\ch14-2_2\README.md">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

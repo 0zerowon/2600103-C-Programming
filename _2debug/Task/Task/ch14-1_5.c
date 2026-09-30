@@ -10,8 +10,6 @@ int CallByValue(int v);
 
 void CallByPointer(int* v);
 
-
-
 int num;
 
 int main()

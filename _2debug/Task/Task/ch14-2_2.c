@@ -1,16 +1,4 @@
-﻿- 최소값 구하기 예제를 참고하여 아래 결과가 나오도록 코드를 수정하시오. 최대값을 구하는 부분은 반드시 함수로 작성하시오.
-```
-정수 5개를 입력하시오.
-50\n
-20\n
-30\n
-40\n
-10\n
-최대값은 50입니다
-```
-# 소스 코드 설명
-```c
-#pragma warning(disable:6031)
+﻿#pragma warning(disable:6031)
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -50,5 +38,3 @@ GetMaxValue(int* arr, const short len)
 
 	return max;
 }
-```
-# 출력 결과
