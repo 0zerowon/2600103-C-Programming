@@ -75,3 +75,4 @@ void get_data(int* d)
 }
 ```
 # 실행 결과
+<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/01bfe923-e906-4ed1-9e9b-df32d8d99469" />
