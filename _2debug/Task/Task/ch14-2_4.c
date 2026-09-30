@@ -4,23 +4,26 @@
 
 #include <stdio.h>
 
-float Split_Number(float f);
+void SplitFloat(float* n, int* d, float* f);
 
 int main()
 {
-	float realNum = 0.0f;
+	float realNum;
+	int intPart;
+	float fracPart;
 
 	printf("실수를 입력하시오: ");
 	scanf("%f", &realNum);
 
-	float frac = Split_Number(realNum);
-	printf("정수부: %d\n", (int)realNum);
-	printf("소수부: %.6f\n", frac);
+	SplitFloat(&realNum, &intPart, &fracPart);
+	printf("정수부: %d\n", intPart);
+	printf("소수부: %.5f\n", fracPart);
 
 	return 0;
 }
 
-float Split_Number(float f)
+void SplitFloat(float* n, int* d, float* f)
 {
-	return f - (int)f;
+	*d = (int)*n;
+	*f = *n - (int)*n;
 }
