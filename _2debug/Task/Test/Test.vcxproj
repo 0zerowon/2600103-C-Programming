@@ -167,6 +167,7 @@
     <ClCompile Include="ch13-1_3.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ch14-2_5,6.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\_0task\ch14\ch14-2\ch14-2_2\README.md" />
