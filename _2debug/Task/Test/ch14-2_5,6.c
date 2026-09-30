@@ -13,34 +13,24 @@
 //	}
 //}
 
+int binary[16];
+
 int main()
 {
-	int nums[10];
-	int i = 0, tmp;
+	int intInput;
 
-	for (int j = 9; j > i; j--)
-	{
-		for (; i <= j; i++)
-		{
-			
-			printf("입력: ");
-			scanf("%d", &tmp);
+	printf("10진수 정수 입력: ");
+	scanf("%d", &intInput);
 
-			if (tmp % 2 == 1)
-			{
-				nums[i] = tmp;
-			}
-			else
-			{
-				nums[j] = tmp;
-				break;
-			}
-		}
-	}
-	printf("배열 요소의 출력: ");
-	for (i = 0; i < 10; i++)
+	for (int i = 0; intInput > 0; i++)
 	{
-		printf("%d ", nums[i]);
+		binary[i] = intInput % 2 ? 1 : 0;
+		intInput /= 2;
 	}
 
+	for (int i = sizeof(binary) / sizeof(int) - 1; i >= 0; i--)
+	{
+		printf("%d", binary[i]);
+	}
+	
 }
