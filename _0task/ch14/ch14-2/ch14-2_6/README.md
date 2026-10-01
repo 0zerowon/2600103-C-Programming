@@ -185,4 +185,6 @@ int main()
 - main 함수 종료
 # 실행 결과
 - 입력에 따라 결과가 달라짐
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/f49ad2b7-7801-4f06-a4dd-f8ff886adf18" />
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/b8223cac-439a-41f3-b98c-b5c5ebc25907" />
 
