@@ -1,6 +1,12 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+﻿// **********************************************
+// 제 목: 내림차순 정렬하기
+// 날 짜: 2026년 10월 1일
+// 작성자: 2600103 송영원
+// **********************************************
 
 #pragma warning(disable:6031)
+
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 
