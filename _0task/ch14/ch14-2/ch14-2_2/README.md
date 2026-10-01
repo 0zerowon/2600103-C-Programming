@@ -138,5 +138,5 @@ return max;
 ```
 max 변수 반환 후 GetMaxValue 함수 종료
 
-# 출력 결과
+# 실행 결과
 <img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/6090e631-5920-4186-9da4-07f3fb928c70" />

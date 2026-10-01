@@ -22,6 +22,7 @@
     <ClCompile Include="..\..\..\_0task\ch14\ch14-1\ch14-1_5\ch14-1_5.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ch13-2_3.c" />
     <ClCompile Include="ch14-1_4.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

@@ -13,24 +13,51 @@
 //	}
 //}
 
-int binary[16];
+//int binary[16];
+//
+//int main()
+//{
+//	int intInput;
+//
+//	printf("10진수 정수 입력: ");
+//	scanf("%d", &intInput);
+//
+//	for (int i = 0; intInput > 0; i++)
+//	{
+//		binary[i] = intInput % 2 ? 1 : 0;
+//		intInput /= 2;
+//	}
+//
+//	for (int i = sizeof(binary) / sizeof(int) - 1; i >= 0; i--)
+//	{
+//		printf("%d", binary[i]);
+//	}
+//	
+//}
 
 int main()
 {
-	int intInput;
+	char str[100];
+	int i = 0;
 
-	printf("10진수 정수 입력: ");
-	scanf("%d", &intInput);
+	printf("문자열 입력: ");
+	scanf("%s", str);
 
-	for (int i = 0; intInput > 0; i++)
+	while (str[i] != '\0')
 	{
-		binary[i] = intInput % 2 ? 1 : 0;
-		intInput /= 2;
+		i++;
 	}
 
-	for (int i = sizeof(binary) / sizeof(int) - 1; i >= 0; i--)
+	if (str[i / 2 - 1] == str[i / 2 + 1])
 	{
-		printf("%d", binary[i]);
+		printf("회문입니다.");
 	}
-	
+	else if (str[i / 2 - 1] == str[i / 2])
+	{
+		printf("회문입니다.");
+	}
+	else
+	{
+		printf("회문이 아닙니다.");
+	}
 }
