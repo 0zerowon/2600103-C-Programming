@@ -231,3 +231,4 @@ void DesSort(int ary[], int len)
 ```
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/2d9cb685-6189-40b6-8350-60abc7703934" />
