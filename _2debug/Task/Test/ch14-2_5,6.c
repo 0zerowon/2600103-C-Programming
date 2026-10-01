@@ -35,29 +35,67 @@
 //	
 //}
 
+//int main()
+//{
+//	char str[100];
+//	int i = 0;
+//
+//	printf("문자열 입력: ");
+//	scanf("%s", str);
+//
+//	while (str[i] != '\0')
+//	{
+//		i++;
+//	}
+//
+//	if (str[i / 2 - 1] == str[i / 2 + 1])
+//	{
+//		printf("회문입니다.");
+//	}
+//	else if (str[i / 2 - 1] == str[i / 2])
+//	{
+//		printf("회문입니다.");
+//	}
+//	else
+//	{
+//		printf("회문이 아닙니다.");
+//	}
+//}
+
+void DesSort(int ary[], int len);
+
 int main()
 {
-	char str[100];
-	int i = 0;
+	int arr[7];
 
-	printf("문자열 입력: ");
-	scanf("%s", str);
-
-	while (str[i] != '\0')
+	for (int i = 0; i < 7; i++)
 	{
-		i++;
+		printf("입력: ");
+		scanf("%d", &arr[i]);
 	}
 
-	if (str[i / 2 - 1] == str[i / 2 + 1])
+	DesSort(arr, 7);
+	for (int i = 0; i < 7; i++)
 	{
-		printf("회문입니다.");
+		printf("%d ", arr[i]);
 	}
-	else if (str[i / 2 - 1] == str[i / 2])
+
+}
+
+void DesSort(int ary[], int len)
+{
+	int temp;
+
+	for (int i = 0; i < len - 1; i++)
 	{
-		printf("회문입니다.");
-	}
-	else
-	{
-		printf("회문이 아닙니다.");
+		for (int j = 0; j < (len - i) - 1; j++)
+		{
+			if(ary[j] < ary[j + 1])
+			{
+				temp = ary[j];
+				ary[j] = ary[j + 1];
+				ary[j + 1] = temp;
+			}
+		}
 	}
 }

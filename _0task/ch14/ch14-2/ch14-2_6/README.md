@@ -10,6 +10,7 @@
 				- "'str'에서 잘못된 데이터를 읽고 있습니다.  읽기 가능한 크기는 '100'바이트인데 실제로는 '-1'바이트만 읽을 수 있습니다."
 	- 문제 3
 		- 도전 5
+			- 예제의 오름차순 정렬 코드가 있어 일부만 수정했다.
 # 소스 코드 설명
 ```c
 #define _CRT_SECURE_NO_WARNINGS
@@ -186,3 +187,45 @@ int main()
 # 실행 결과
 - 입력에 따라 결과가 달라짐
 
+# 소스 코드 설명
+```c
+void DesSort(int ary[], int len);
+
+int main()
+{
+	int arr[7];
+
+	for (int i = 0; i < 7; i++)
+	{
+		printf("입력: ");
+		scanf("%d", &arr[i]);
+	}
+
+	DesSort(arr, 7);
+	for (int i = 0; i < 7; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+
+}
+
+void DesSort(int ary[], int len)
+{
+	int temp;
+
+	for (int i = 0; i < len - 1; i++)
+	{
+		for (int j = 0; j < (len - i) - 1; j++)
+		{
+			if(ary[j] < ary[j + 1])
+			{
+				temp = ary[j];
+				ary[j] = ary[j + 1];
+				ary[j + 1] = temp;
+			}
+		}
+	}
+}
+```
+
+# 실행 결과
