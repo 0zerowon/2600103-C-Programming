@@ -136,3 +136,4 @@ int main()
 	- "%d" == *(*(*(arr + 2) + int8.j) + int8.k)
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/12314dae-9dd7-42a8-9f78-62426d578172" />
