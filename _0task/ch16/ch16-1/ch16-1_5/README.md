@@ -120,3 +120,4 @@ int main()
 	- %s는 문자열을 담고 있는 배열의 첫 번째 원소의 주소여야 널문자 전까지 출력
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/e2b2635f-7b62-46d6-84f2-60a67963647d" />
