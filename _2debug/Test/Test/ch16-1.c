@@ -1,6 +1,5 @@
 ﻿#include <stdio.h>
 
-
 int main()
 {
 	int arr[5][3] = { {1,1,1} };
@@ -11,7 +10,7 @@ int main()
 		for (int j = 0; j < 3; j++)
 		{
 			printf("%5d", arr[i][j]);
-			printf(" - %d", &arr[0][0] + j + 4 * i);		// i행 j열의 주소
+			printf(" - %d", &arr[0][0] + 3 * i + j );		// i행 j열의 주소
 
 		}
 		printf("\n");

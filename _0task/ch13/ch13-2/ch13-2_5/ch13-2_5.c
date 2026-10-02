@@ -1,7 +1,7 @@
-// **********************************************
-// Á¦ ¸ñ: apple, blueberry, orange, melon Áß »çÀü¼øÀ¸·Î °¡Àå ¾Õ¿¡ ¿À´Â ¹®ÀÚ¿­À» Ã£±â
-// ³¯ Â¥: 2026³â 9¿ù 17ÀÏ
-// ÀÛ¼ºÀÚ: 2600103 ¼Û¿µ¿ø
+ï»¿// **********************************************
+// ì œ ëª©: apple, blueberry, orange, melon ì¤‘ ì‚¬ì „ìˆœìœ¼ë¡œ ê°€ì¥ ì•ì— ì˜¤ëŠ” ë¬¸ìì—´ì„ ì°¾ê¸°
+// ë‚  ì§œ: 2026ë…„ 9ì›” 17ì¼
+// ì‘ì„±ì: 2600103 ì†¡ì˜ì›
 // **********************************************
 
 #include <stdio.h>
@@ -9,17 +9,17 @@
 int main()
 {
 	char* fruits[] = { "apple", "blueberry", "orange", "melon" };
-	char* firstString = { "first" };
+	char* firstString = *(fruits + 0);
 
 	int n = sizeof(fruits) / sizeof(fruits[0]);
 
-	for (int i = 0; i < n-1; i++)
+	for (int i = 1; i < n-1; i++)
 	{
-		if(fruits[i][0] < firstString[0])
+		if(fruits[i][0] < *firstString)
 		{
 			firstString = fruits[i];
 		}
 	}
 	
-	printf("»çÀü¼øÀ¸·Î °¡Àå ¾Õ¿¡ ¿À´Â ¹®ÀÚ¿­: %s", firstString);
+	printf("ì‚¬ì „ìˆœìœ¼ë¡œ ê°€ì¥ ì•ì— ì˜¤ëŠ” ë¬¸ìì—´: %s", firstString);
 }
