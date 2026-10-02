@@ -80,3 +80,4 @@ int main()
 - main 함수 종료
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/133c7ca6-0f96-4e5d-9569-3cb5663166f0" />
