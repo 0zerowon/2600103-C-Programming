@@ -98,3 +98,6 @@ int main()
 }
 ```
 - main 함수 종료
+
+# 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/01495120-160d-4864-bf59-b135708e5542" />
