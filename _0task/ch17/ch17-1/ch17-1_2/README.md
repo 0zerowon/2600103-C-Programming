@@ -91,3 +91,4 @@ int get_max(int** p, int len)
 - 함수를 호출한 곳에 m을 반환 후 get_max 함수 종료
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/39f97a89-c00e-4998-9d3e-bc8ed80d2b0b" />
