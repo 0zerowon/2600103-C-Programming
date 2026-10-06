@@ -1,4 +1,5 @@
 ﻿#include <stdio.h>
+
 int get_max(int** p, int len);
 
 int main(void)
