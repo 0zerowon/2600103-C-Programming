@@ -8,6 +8,11 @@
 \end{pmatrix}
 ```
 
+```
+최대값은 100
+위치는 2행 3열
+```
+
 # 소스 코드 설명
 
 ```c
@@ -83,4 +88,5 @@ int main()
 - main 함수 종료
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/c2f632b1-a1c8-4459-93fa-d621e555e202" />
 
