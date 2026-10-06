@@ -15,18 +15,20 @@ int main()
 		{ -20,5,100 },
 		{ -75,5,-25 } };
 	int maxVal = arr[0][0];
-	short i, j;
+	short maxIdxI = 0, maxIdxJ = 0;
 
-	for (i = 0; i < ARRAY_SIZE; i++)
+	for (short i = 0; i < ARRAY_SIZE; i++)
 	{
-		for (j = 0; j < ARRAY_SIZE; j++)
+		for (short j = 0; j < ARRAY_SIZE; j++)
 		{
-			if(maxVal < arr[i][j])
+			if (maxVal < arr[i][j])
 			{
 				maxVal = arr[i][j];
+				maxIdxI = i;
+				maxIdxJ = j;
 			}
 		}
 	}
 
-	printf("arr[%d][%d] == %d\n", i-1, j-1, maxVal);
+	printf("최대값은 %d\n위치는 %d행 %d열\n", maxVal, maxIdxI + 1, maxIdxJ + 1);
 }

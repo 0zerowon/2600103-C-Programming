@@ -38,11 +38,12 @@ int main()
 		{ -20,5,100 },
 		{ -75,5,-25 } };
 	int maxVal = arr[0][0];
-	short i, j;
+	short maxIdxI = 0, maxIdxJ = 0;
 ```
 - 2차원 배열 arr 선언 및 각 원소 -5, 2, 35, -20, 5, 100, -75, 5, -25로 초기화
 - maxVal 변수를 arr[0][0] 값으로 초기화하여 최대값을 저장할 변수로 사용
-- i, j 변수를 반복문에서 사용할 short형 변수로 선언
+- short형 변수 maxIdxI, maxIdxJ를 선언 및 0으로 초기화
+	- 최대값의 위치를 저장할 인덱스
 
 <br>
 
@@ -54,6 +55,8 @@ int main()
 			if(maxVal < arr[i][j])
 			{
 				maxVal = arr[i][j];
+				maxIdxI = i;
+				maxIdxJ = j;
 			}
 		}
 	}
@@ -67,10 +70,10 @@ int main()
 <br>
 
 ```c
-	printf("arr[%d][%d] == %d\n", i-1, j-1, maxVal);
+	printf("최대값은 %d\n위치는 %d행 %d열\n", maxVal, maxIdxI + 1, maxIdxJ + 1);
 ```
 - 최대값과 위치를 출력
-	- i-1, j-1은 반복문 종료 후 i, j 값이 3이므로 2로 조정하여 최대값의 위치를 출력
+	- 배열의 인덱스는 0부터 시작하기에 maxIdxI, maxIdxI 값이 1, 2이므로 2, 3으로 조정하여 최대값의 위치를 출력
 
 <br>
 
@@ -80,4 +83,4 @@ int main()
 - main 함수 종료
 
 # 실행 결과
-<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/133c7ca6-0f96-4e5d-9569-3cb5663166f0" />
+
