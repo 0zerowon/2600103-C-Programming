@@ -8,7 +8,7 @@ int main(void)
 	int* ptrarr[3] = { &num1, &num2, &num3 };
 	int max;
 	max = get_max(ptrarr, 3); // 함수호출
-	printf("최댓값:%d\n", max);
+	printf("최대값: %d\n", max);
 	return 0;
 }
 

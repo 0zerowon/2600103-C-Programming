@@ -9,7 +9,7 @@ int num1 = 50, num2 = 20, num3 = 30;
 int* ptrarr[3] = {&num1, &num2, &num3};
 int max;
 max = get_max(ptrarr, 3); // 함수호출
-printf("최대값:%d\n", max);
+printf("최대값: %d\n", max);
 return 0;
 }
 // 함수정의
@@ -25,6 +25,7 @@ int get_max(int** p, int len);
 ```
 - int형 값을 반환하는 get_max 선언
 	- 매개변수 int형 이중 포인터 p, int형 len
+		- 이중 포인터는 포인터의 주소 값을 받음
 
 	<br>
 
