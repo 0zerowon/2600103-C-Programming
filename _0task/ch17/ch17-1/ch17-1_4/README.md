@@ -301,9 +301,16 @@ int main()
 ## 메모리 그림
 | main 함수 호출 후 MaxAndMin 함수 호출 전 | -> | MaxAndMin 함수 호출 및 실행 | -> | MaxAndMin 함수 종료 후 | -> | main 함수 종료 후 |
 | :---: | | :---: | | :---: | | :---: |
-| maxPtr | | maxPtr | | maxPtr |
-| minPtr | | minPtr |
-| arr | |
-| len -> 5 | |
+| maxPtr | | if (arrMax < *(arr + i)) maxPtr -> arr + i | | maxPtr |
+| minPtr | | else if (arrMin > *(arr + i)) minPtr -> arr + i |
+| arr | | arr[i] -> %d | | arr[i] -> %d | |
+| len -> 5 | | len -> 5 | | len -> 5 | |
+| | | maxP -> &maxPtr | |
+| | | minP -> &maxPtr | |
+| | | arr -> arr[0] | |
+| | | arrLen -> 5 | |
+| | | i -> 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 1 -> 2 -> 3 -> 4 -> 5 | |
+| | | arrMax -> arr[0] -> if (arrMax < *(arr + i)) arrMax -> arr[i] |
+| | | arrMin -> arr[0] -> else if (arrMin > *(arr + i)) arrMin -> arr[i] |
 
 # 실행 결과
