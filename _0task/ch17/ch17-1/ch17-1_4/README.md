@@ -298,10 +298,10 @@ int main()
 
 ## 메모리 그림
 | main 함수 호출 후 MaxAndMin 함수 호출 전 | -> | MaxAndMin 함수 호출 및 실행 | -> | MaxAndMin 함수 종료 후 | -> | main 함수 종료 후 |
-| :---: | | :---: | | :---: | | :---: |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | maxPtr | | if (arrMax < *(arr + i)) maxPtr -> arr + i | | maxPtr -> ? | |
 | minPtr | | else if (arrMin > *(arr + i)) minPtr -> arr + i | | maxPtr -> ? | |
-| arr | | arr[i] -> %d | | arr[0] -> ?<br>arr[1] -> ?<br>arr[2] -> ?<br>arr[3] -> ?<br>arr[4] -> ? | |
+| arr | | arr[i] -> %d | | arr[0] -> ? <br> arr[1] -> ? <br> arr[2] -> ? <br> arr[3] -> ? <br> arr[4] -> ? | |
 | len -> 5 | | len -> 5 | | len -> 5 | |
 | | | maxP -> &maxPtr | |
 | | | minP -> &maxPtr | |
@@ -312,3 +312,4 @@ int main()
 | | | arrMin -> arr[0] -> else if (arrMin > *(arr + i)) arrMin -> arr[i] |
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/df9b4064-a59e-48c1-9b5a-db821acf0f9c" />
