@@ -71,10 +71,10 @@ void MaxAndMin(int** maxP, int** minP, int* arr, const unsigned short arrLen)
 <br>
 
 ```c
-		printf("arr[%d] == ", i);
+		printf("arr[%hu] == ", i);
 ```
-- printf 함수로 "arr[%d] == " 출력
-	- "%d" == i
+- printf 함수로 "arr[%hu] == " 출력
+	- "%hu" == i
 		- 첨자
 
 <br>
@@ -99,20 +99,18 @@ void MaxAndMin(int** maxP, int** minP, int* arr, const unsigned short arrLen)
 <br>
 
 ```c
-	int arrMax = *(arr + 0);
+	*maxP = arr;
 ```
-- int형 지역변수 arrMax 선언 및
-- 매개변수 arr에 포인터 연산 + 0한 주소 값을 간접 참조 연산한 값으로 초기화
-	- 배열 첨자 0의 원소 값
+- 매개변수 maxP가 가르키는 main 함수의 지역 변수 maxPtr에
+	- 매개변수 arr의 값인 main 함수의 지역 변수 arr의 첫 번째 원소 주소 대입
 
 <br>
 
 ```c
-	int arrMin = *(arr + 0);
+	*minP = arr;
 ```
-- int형 지역변수 arrMin 선언 및
-- 매개변수 arr에 포인터 연산 + 0한 주소 값을 간접 참조 연산한 값으로 초기화
-	- 배열 첨자 0의 원소 값
+- 매개변수 maxP가 가르키는 main 함수의 지역 변수 maxPtr에
+	- 매개변수 arr의 값인 main 함수의 지역 변수 arr의 첫 번째 원소 주소 대입
 
 <br>
 
@@ -120,7 +118,7 @@ void MaxAndMin(int** maxP, int** minP, int* arr, const unsigned short arrLen)
 	for (i = 1; i < arrLen; i++)
 ```
 - i를 1로 대입
-	- arrMax, arrMin에 배열 첨자 0의 값이 대입되어 있어 첨자 1의 원소 값부터 비교
+	- arrMax, arrMin에 배열 첨자 0의 값이 대입되어 있어 i를 1부터 시작
 - i가 arrLen 보다 작으면
 	- 반복문 시작
 
@@ -175,7 +173,7 @@ void MaxAndMin(int** maxP, int** minP, int* arr, const unsigned short arrLen)
 		else if (arrMin > *(arr + i))
 ```
 - 위 분기문의 조건이 거짓이고
-- arrMin이 매개변수 arr에 포인터 연산 + i한 주소 값을 간접 참조 연산한 값 보다 크다면
+- arrMin이 매개변수 arr에 포인터 연산 + i한 주소 값을 간접 참조 연산한 값 보다 크면
 	
 <br>
 
@@ -283,9 +281,9 @@ int main()
 <br>
 
 ```c
-	printf("int arr[5]의 최대값은 %d, 최소값은 %d", *maxPtr, *minPtr);
+	printf("배열 arr의 최대값은 %d, 최소값은 %d", *maxPtr, *minPtr);
 ```
-- printf 함수로 "int arr[5]의 최대값은 %d, 최소값은 %d" 출력
+- printf 함수로 "배열 arr의 최대값은 %d, 최소값은 %d" 출력
 	- "%d" == *maxPtr
 		- maxPtr에는 arr의 최대값의 원소의 주소가 할당되어 있어 그 주소를 간접 참조 연산자를 사용하여 값 출력
 	- "%d" == *minPtr
@@ -301,9 +299,9 @@ int main()
 ## 메모리 그림
 | main 함수 호출 후 MaxAndMin 함수 호출 전 | -> | MaxAndMin 함수 호출 및 실행 | -> | MaxAndMin 함수 종료 후 | -> | main 함수 종료 후 |
 | :---: | | :---: | | :---: | | :---: |
-| maxPtr | | if (arrMax < *(arr + i)) maxPtr -> arr + i | | maxPtr |
-| minPtr | | else if (arrMin > *(arr + i)) minPtr -> arr + i |
-| arr | | arr[i] -> %d | | arr[i] -> %d | |
+| maxPtr | | if (arrMax < *(arr + i)) maxPtr -> arr + i | | maxPtr -> ? | |
+| minPtr | | else if (arrMin > *(arr + i)) minPtr -> arr + i | | maxPtr -> ? | |
+| arr | | arr[i] -> %d | | arr[0] -> ?<br>arr[1] -> ?<br>arr[2] -> ?<br>arr[3] -> ?<br>arr[4] -> ? | |
 | len -> 5 | | len -> 5 | | len -> 5 | |
 | | | maxP -> &maxPtr | |
 | | | minP -> &maxPtr | |
