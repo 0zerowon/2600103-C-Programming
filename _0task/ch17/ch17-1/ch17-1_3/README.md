@@ -52,3 +52,4 @@ void prn_str(char** p, unsigned short cnt)
 	- prn_str 함수 종료
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/78c64f58-9103-4ee0-a3d0-2a07822dca72" />
