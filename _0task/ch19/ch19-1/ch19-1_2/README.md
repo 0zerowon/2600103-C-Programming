@@ -1,2 +1,84 @@
-- ì¸í„°ë„·ì—ì„œ í•¨ìˆ˜ì˜ ë§¤ê°œë³€ìˆ˜ì— í•¨ìˆ˜ í¬ì¸í„°ë¥¼ í™œìš©í•˜ëŠ” ì˜ˆì œë¥¼ ì°¾ì•„ ì‹¤í–‰í•´ ë³´ê³  ì½”ë“œë¥¼ ì„¤ëª…í•˜ì‹œì˜¤.
-- ì¸í„°ë„·ì—ì„œ í•¨ìˆ˜ì˜ ë§¤ê°œë³€ìˆ˜ì— void í¬ì¸í„°ë¥¼ í™œìš©í•˜ëŠ” ì˜ˆì œë¥¼ ì°¾ì•„ ì‹¤í–‰í•´ ë³´ê³  ì½”ë“œë¥¼ ì„¤ëª…í•˜ì‹œì˜¤.
+- ÀÎÅÍ³Ý¿¡¼­ ÇÔ¼öÀÇ ¸Å°³º¯¼ö¿¡ ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ È°¿ëÇÏ´Â ¿¹Á¦¸¦ Ã£¾Æ ½ÇÇàÇØ º¸°í ÄÚµå¸¦ ¼³¸íÇÏ½Ã¿À.
+- ÀÎÅÍ³Ý¿¡¼­ ÇÔ¼öÀÇ ¸Å°³º¯¼ö¿¡ void Æ÷ÀÎÅÍ¸¦ È°¿ëÇÏ´Â ¿¹Á¦¸¦ Ã£¾Æ ½ÇÇàÇØ º¸°í ÄÚµå¸¦ ¼³¸íÇÏ½Ã¿À.
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+	char name[20];
+	int score;
+} Student;
+
+int compare_by_score(const void *a, const void *b) {
+	Student *studentA = (Student *)a;
+	Student *studentB = (Student *)b;
+	return studentB->score - studentA->score; // ¼ºÀûÀÌ ³ôÀº ¼ø
+}
+
+int compare_by_name(const void *a, const void *b) {
+	Student *studentA = (Student *)a;
+	Student *studentB = (Student *)b;
+	return strcmp(studentA->name, studentB->name); // ÀÌ¸§ »çÀü¼ø
+}
+
+void print_students(Student arr[], int size) {
+	for (int i = 0; i < size; i++) {
+		printf("%s: %dÁ¡\n", arr[i].name, arr[i].score);
+	}
+	printf("\n");
+}
+
+int main() {
+	Student list[3] = {
+		{"±èÃ¶¼ö", 85},
+		{"ÀÌ¿µÈñ", 95},
+		{"¹Ú¹Î¼ö", 70}
+	};
+	int size = sizeof(list) / sizeof(list[0]);
+
+	printf("=== ¼ºÀû ³ôÀº ¼ø Á¤·Ä ===\n");
+	qsort(list, size, sizeof(Student), compare_by_score);
+	print_students(list, size);
+
+	printf("=== ÀÌ¸§ »çÀü ¼ø Á¤·Ä ===\n");
+	qsort(list, size, sizeof(Student), compare_by_name);
+	print_students(list, size);
+
+	return 0;
+}
+```
+- ½ÇÇà °á°ú
+	```
+	=== ¼ºÀû ³ôÀº ¼ø Á¤·Ä ===
+	ÀÌ¿µÈñ: 95Á¡
+	±èÃ¶¼ö: 85Á¡
+	¹Ú¹Î¼ö: 70Á¡
+	
+	=== ÀÌ¸§ »çÀü ¼ø Á¤·Ä ===
+	±èÃ¶¼ö: 85Á¡
+	¹Ú¹Î¼ö: 70Á¡
+	ÀÌ¿µÈñ: 95Á¡
+	```
+- ¼Ò½º ÄÚµå ¼³¸í
+	- qsortÀÇ ¸Å°³ º¯¼ö¿¡ ¹è¿­ ÁÖ¼Ò, ¿ä¼Ò °³¼ö, ±¸Á¶Ã¼ Å©±â, ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ »ç¿ë
+		- main ÇÔ¼ö¿¡¼­ Ã¹ ¹øÂ° qsort ÇÔ¼ö È£Ãâ ½Ã ÀÎÀÚ·Î ÇÔ¼ö ÁÖ¼Ò compare_by_score
+		- µÎ ¹øÂ° qsort ÇÔ¼ö È£Ãâ ½Ã ÀÎÀÚ·Î ÇÔ¼ö ÁÖ¼Ò compare_by_name
+	- qsort ÇÔ¼ö¿¡¼­ ±âÁØÁ¡À» Á¤ÇÏ¿© ºñ±³ÇÒ ´ë»óÀ» ÁöÁ¤
+		- ¸Å°³ º¯¼ö·Î ¹ÞÀº compare_by_ ÇÔ¼ö¸¦ È£ÃâÇÏ¿©
+			- µÎ ´ë»óÀÇ ±¸Á¶Ã¼ ¹è¿­ÀÇ ¿ø¼Ò ÁÖ¼Ò¸¦ ÀÎÀÚ·Î
+				- compare_by_ ÇÔ¼ö¿¡¼­ ¸Å°³º¯¼ö·Î void Æ÷ÀÎÅÍ·Î ¹Þ¾Æ 
+					- ¾ö°ÝÇÑ ÄÄÆÄÀÏ·¯´Â ÀÎ¼ö¿Í ¸Å°³ º¯¼öÀÇ ÀÚ·áÇüÀÌ void·Î °°¾Æ¾ß ÇÔ
+						- Á» ´õ ¾ö°ÝÇÑ c++ ÄÄÆÄÀÏ·¯ ¿À·ù E0167 ¹× C2664
+							- "int (*)(const Student *a, const Student *b)" Çü½ÄÀÇ ÀÎ¼ö°¡ "_CoreCrtNonSecureSearchSortCompareFunction" (aka "int (__cdecl *)(const void *, const void *)") Çü½ÄÀÇ ¸Å°³ º¯¼ö¿Í È£È¯µÇÁö ¾Ê½À´Ï´Ù.
+							- 'void qsort(void *,size_t,size_t,_CoreCrtNonSecureSearchSortCompareFunction)': ÀÎ¼ö 4À»(¸¦) 'int (__cdecl *)(const Student *,const Student *)'¿¡¼­ '_CoreCrtNonSecureSearchSortCompareFunction'(À¸)·Î º¯È¯ÇÒ ¼ö ¾ø½À´Ï´Ù.
+				- °­Á¦ Çü º¯È¯ÇÏ¿© Student ÀÚ·áÇüÀÇ ¸â¹ö º¯¼ö¿¡ Á¢±Ù
+					- score ÇÔ¼ö´Â ³»¸²Â÷¼ø Á¤·Ä·Î ¹ÝÈ¯
+						- ¾ç¼ö¸é Ã¹ ¹øÂ° ÀÎÀÚ°¡ µÚ
+						- À½¼ö¸é µÎ ¹øÂ° ÀÎÀÚ°¡ ¾Õ
+					- name ÇÔ¼ö´Â ¿À¸§Â÷¼ø Á¤·Ä ¹ÝÈ¯
+						- strcmp ÇÔ¼ö·Î ºñ±³
+							- »çÀü ¾Õ¿¡ ¿À´Â ¹®ÀÚ´Â ¾Æ½ºÅ°ÄÚµå °ªÀÌ ÀÛÀ½
+								- À½¼ö¸é Ã¹ ¹øÂ° ÀÎÀÚ°¡ ¾Õ
+								- ¾ç¼ö¸é µÎ ¹øÂ° ÀÎÀÚ°¡ µÚ
+			- ¹ÝÈ¯ ¹ÞÀº ¾ç¼ö ¶Ç´Â À½¼ö¿¡ µû¶ó ½º¿Ò

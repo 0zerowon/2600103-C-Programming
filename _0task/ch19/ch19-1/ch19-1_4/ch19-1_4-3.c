@@ -1,45 +1,9 @@
-- 20장 도전 문제 중에서 3문제만 골라서 푸시오.
-	- 도전 3
-	- 도전 4
-	- 도전 6
+// **********************************************
+// 제 목: 숫자 야구!
+// 날 짜: 2026년 10월 9일
+// 작성자: 2600103 송영원
+// **********************************************
 
-# 소스 코드 설명
-## 도전 3
-```c
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-	int i;
-	printf("난수의 범위: 0부터 99까지\n");
-	for (i = 0; i < 5; i++)
-	{
-		printf("난수 출력: %d\n", rand() % 100);
-	}
-}
-```
-
-## 도전 4
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main()
-{
-	int i;
-
-	srand((int)time(NULL));
-	for (i = 1; i <= 2; i++)
-	{
-		printf("주사위 %d의 결과 %d\n", i, rand() % 6 + 1);
-	}
-}
-```
-
-## 도전 6
-```
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:6031)
 #include <stdio.h>
@@ -111,9 +75,3 @@ int main()
 	}
 	printf("\n\n\n끝!");
 }
-```
-
-# 실행 결과
-## 도전 3
-## 도전 4
-## 도전 6

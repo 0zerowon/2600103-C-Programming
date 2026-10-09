@@ -1,7 +1,203 @@
-- ì˜ˆì œ 2ë²ˆì„ ì°¸ê³ í•˜ì—¬ í•¨ìˆ˜ í¬ì¸í„°ë¥¼ í™œìš©í•˜ì—¬ ë‹¤ìŒì²˜ëŸ¼ ì‹¤í–‰ë˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤.
-- ê³µí†µ ë¶€ë¶„ì€ í•˜ë‚˜ì˜ í•¨ìˆ˜ì— ì‘ì„±í•˜ê³  ì—°ì‚° ë¶€ë¶„ë§Œ ë¶„ë¦¬ëœ í•¨ìˆ˜ë¡œ ë§Œë“¤ ê²ƒ
+- ¿¹Á¦ 2¹øÀ» Âü°íÇÏ¿© ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ È°¿ëÇÏ¿© ´ÙÀ½Ã³·³ ½ÇÇàµÇ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À.
+- °øÅë ºÎºĞÀº ÇÏ³ªÀÇ ÇÔ¼ö¿¡ ÀÛ¼ºÇÏ°í ¿¬»ê ºÎºĞ¸¸ ºĞ¸®µÈ ÇÔ¼ö·Î ¸¸µé °Í
 ```
-ì—°ì‚°ì„ ì„ íƒí•˜ì‹œì˜¤(1:ë§ì…ˆ,2:ëº„ì…ˆ,3:ê³±ì…ˆ,4:ë‚˜ëˆ—ì…ˆ): 1\n
-ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: 10 20\n
-ê²°ê³¼ê°’: 30
+¿¬»êÀ» ¼±ÅÃÇÏ½Ã¿À(1:µ¡¼À,2:»¬¼À,3:°ö¼À,4:³ª´°¼À): 1\n
+µÎ °³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: 10 20\n
+°á°ú°ª: 30
 ```
+
+# ¼Ò½º ÄÚµå ¼³¸í
+
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
+#include <stdio.h>
+```
+- scanf ÇÔ¼ö¿Í printf ÇÔ¼ö¸¦ »ç¿ëÇÏ±â À§ÇÑ ÄÚµå
+
+```c
+void MenuSelect(unsigned short* menu, short* a, short* b);
+void Calculator(unsigned short usrInput, short a, short b);
+void PrintResult(short (*calRes)(short, short), short a, short b);
+```
+- »ç¿ëÀÚ°¡ »ç¿ëÇÒ ¸Ş´º¸¦ Á¤ÀÇÇÒ ÇÔ¼ö ¼±¾ğ
+	- ¹İÈ¯ ¾ø´Â MenuSelect
+		- ¸Å°³º¯¼ö
+			- ºÎÈ£ ¾ø´Â shortÇü Æ÷ÀÎÅÍ menu
+			- shortÇü Æ÷ÀÎÅÍ a, b
+- »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ¸Ş´º¸¦ ½ÇÇàÇÒ ÇÔ¼ö ¼±¾ğ
+	- ¹İÈ¯ ¾ø´Â Calculator
+		- ¸Å°³º¯¼ö
+			- ºÎÈ£ ¾ø´Â shortÇü º¯¼ö usrInput
+			- shortÇü º¯¼ö a, b
+- ¸Ş´º¸¦ ½ÇÇàÇÏ¿© Ãâ·ÂÇÏ´Â ÇÔ¼ö ¼±¾ğ
+	- ¹İÈ¯ ¾ø´Â PrintResult
+		- ¸Å°³º¯¼ö
+			- ¸Å°³º¯¼ö¸¦ short º¯¼ö µÎ °³·Î ¼±¾ğµÈ shortÇü ÇÔ¼ö¸¦ ´ã´Â ÇÔ¼ö Æ÷ÀÎÅÍ calRes
+			- shortÇü º¯¼ö a, b
+
+```c
+short Add(short a, short b);
+short Sub(short a, short b);
+short Mul(short a, short b);
+short Div(short a, short b);
+```
+- »çÄ¢¿¬»êÀ» ¼öÇàÇÒ ÇÔ¼ö ¼±¾ğ
+	- shortÇü ÇÔ¼ö
+		- Add
+		- Sub
+		- Mul
+		- Div
+	- ¸Å°³º¯¼ö
+		- shortÇü a, b
+
+```c
+int main()
+{
+```
+- main ÇÔ¼ö ½ÃÀÛ
+
+```c
+	unsigned short usrMenuSelection = 0;
+	short decA, decB;
+```
+- ºÎÈ£ ¾ø´Â shortÇü º¯¼ö usrMenuSelection ¼±¾ğ ¹× 0À¸·Î ÃÊ±âÈ­
+- shortÇü º¯¼ö decA, decB ¼±¾ğ
+
+```c
+	MenuSelect(&usrMenuSelection, &decA, &decB);
+	Calculator(usrMenuSelection, decA, decB);
+```
+- MenuSelect ÇÔ¼ö È£Ãâ
+	- ÀÎÀÚ
+		- ÁÖ¼Ò ¿¬»êÀ» ÇÏ¿© Æ÷ÀÎÅÍ ¸Å°³º¯¼ö¿¡ Àü´Ş
+			- &usrMenuSelection
+			- &decA
+			- &decB
+
+```c
+}
+```
+- main ÇÔ¼ö Á¾·á
+
+```c
+void MenuSelect(unsigned short* menu, short* a, short* b)
+```
+- MenuSelect ÇÔ¼ö Á¤ÀÇ
+
+```c
+{
+	printf("¿¬»êÀ» ¼±ÅÃÇÏ½Ã¿À(1: µ¡¼À, 2: »¬¼À, 3: °ö¼À, 4: ³ª´°¼À): ");
+	scanf("%hu", menu);
+	printf("µÎ °³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	scanf("%hd %hd", a, b);
+}
+```
+- "¿¬»êÀ» ¼±ÅÃÇÏ½Ã¿À(1: µ¡¼À, 2: »¬¼À, 3: °ö¼À, 4: ³ª´°¼À): " Ãâ·Â
+- usrMenuSelection¿¡ »ç¿ëÀÚ ÀÔ·Â ÇÒ´ç
+- "µÎ °³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: " Ãâ·Â
+- a, b¿¡ »ç¿ëÀÚ ÀÔ·Â ÇÒ´ç
+
+```c
+void Calculator(unsigned short usrMenuInput, short a, short b)
+```
+- Calculator ÇÔ¼ö Á¤ÀÇ
+
+```c
+{
+	switch (usrMenuInput)
+	{
+		case 1:
+		{
+			PrintResult(Add, a, b);
+			break;
+		}
+		case 2:
+		{
+			PrintResult(Sub, a, b);
+			break;
+		}
+		case 3:
+		{
+			PrintResult(Mul, a, b);
+			break;
+		}
+		case 4:
+		{
+			PrintResult(Div, a, b);
+			break;
+		}
+	}
+}
+```
+- ºĞ±â¹®
+	- ¸Å°³º¯¼ö usrMenuInputÀÇ °ªÀÌ
+		- 1
+			- PrintResult ÇÔ¼ö ½ÇÇà
+				- ¸Å°³º¯¼ö
+					- Add ÇÔ¼ö ÁÖ¼Ò
+					- ¸Å°³º¯¼ö a, b
+		- 2
+			- PrintResult ÇÔ¼ö ½ÇÇà
+				- ¸Å°³º¯¼ö
+					- Sub ÇÔ¼ö ÁÖ¼Ò
+					- ¸Å°³º¯¼ö a, b
+		- 3
+			- PrintResult ÇÔ¼ö ½ÇÇà
+				- ¸Å°³º¯¼ö
+					- Mul ÇÔ¼ö ÁÖ¼Ò
+					- ¸Å°³º¯¼ö a, b
+		- 4
+			- PrintResult ÇÔ¼ö ½ÇÇà
+				- ¸Å°³º¯¼ö
+					- Div ÇÔ¼ö ÁÖ¼Ò
+					- ¸Å°³º¯¼ö a, b
+
+```c
+void PrintResult(short(*calRes)(short, short), short a, short b)
+```
+-PrintResult ÇÔ¼ö Á¤ÀÇ
+
+```c
+{
+	short res = calRes(a, b);
+
+	printf("°á°ú °ª: %hd", res);
+}
+```
+- Áö¿ªº¯¼ö shortÇü res ¼±¾ğ ¹× 
+	- ¸Å°³º¯¼ö ÇÔ¼ö Æ÷ÀÎÅÍ calRes·Î ÇØ´ç ÁÖ¼ÒÀÇ ÇÔ¼ö¿¡ ÀÎÀÚ·Î ¸Å°³º¯¼ö a, b¸¦ »ç¿ëÇÑ ÇÔ¼ö È£ÃâÀÇ ¹İÈ¯ °ªÀ¸·Î ÃÊ±âÈ­
+- "°á°ú °ª: %hd" Ãâ·Â
+	- "hd": ºÎÈ£ ÀÖ´Â shortÇü º¯¼ö resÀÇ °ª
+
+```c
+short Add(short a, short b)
+{
+	return a + b;
+}
+
+short Sub(short a, short b)
+{
+	return a - b;
+}
+
+short Mul(short a, short b)
+{
+	return a * b;
+}
+
+short Div(short a, short b)
+{
+	return a / b;
+}
+```
+- shortÇü »çÄ¢¿¬»êÀ» ¼öÇàÇÏ´Â ÇÔ¼ö Á¤ÀÇ
+	- Add
+		- ¸Å°³º¯¼öÀÇ a, b¸¦ ´õÇÑ °ª ¹İÈ¯
+	- Sub
+		- ¸Å°³º¯¼öÀÇ a, b¸¦ »« °ª ¹İÈ¯
+	- Mul
+		- ¸Å°³º¯¼öÀÇ a, b¸¦ °öÇÑ °ª ¹İÈ¯
+	- Div
+		- ¸Å°³º¯¼öÀÇ a, b¸¦ ³ª´« °ª ¹İÈ¯
+# ½ÇÇà °á°ú
