@@ -1,10 +1,10 @@
-- 20Àå µµÀü ¹®Á¦ Áß¿¡¼­ 3¹®Á¦¸¸ °ñ¶ó¼­ Çª½Ã¿À.
-	- µµÀü 3
-	- µµÀü 4
-	- µµÀü 6
+- 20ì¥ ë„ì „ ë¬¸ì œ ì¤‘ì—ì„œ 3ë¬¸ì œë§Œ ê³¨ë¼ì„œ í‘¸ì‹œì˜¤.
+	- ë„ì „ 3
+	- ë„ì „ 4
+	- ë„ì „ 6
 
-# ¼Ò½º ÄÚµå ¼³¸í
-## µµÀü 3
+# ì†ŒìŠ¤ ì½”ë“œ ì„¤ëª…
+## ë„ì „ 3
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,15 +12,15 @@
 int main()
 {
 	int i;
-	printf("³­¼öÀÇ ¹üÀ§: 0ºÎÅÍ 99±îÁö\n");
+	printf("ë‚œìˆ˜ì˜ ë²”ìœ„: 0ë¶€í„° 99ê¹Œì§€\n");
 	for (i = 0; i < 5; i++)
 	{
-		printf("³­¼ö Ãâ·Â: %d\n", rand() % 100);
+		printf("ë‚œìˆ˜ ì¶œë ¥: %d\n", rand() % 100);
 	}
 }
 ```
 
-## µµÀü 4
+## ë„ì „ 4
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,12 +33,12 @@ int main()
 	srand((int)time(NULL));
 	for (i = 1; i <= 2; i++)
 	{
-		printf("ÁÖ»çÀ§ %dÀÇ °á°ú %d\n", i, rand() % 6 + 1);
+		printf("ì£¼ì‚¬ìœ„ %dì˜ ê²°ê³¼ %d\n", i, rand() % 6 + 1);
 	}
 }
 ```
 
-## µµÀü 6
+## ë„ì „ 6
 ```
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:6031)
@@ -76,13 +76,13 @@ int main()
 		while (isDuplicate);
 	}
 
-	printf("¼ıÀÚ ¾ß±¸!\n\n");
+	printf("ìˆ«ì ì•¼êµ¬!\n\n");
 	while (1)
 	{
 		strike = 0;
 		ball = 0;
 
-		printf("\n\n¼¼ °³ ¼ıÀÚ ÀÔ·Â: ");
+		printf("\n\nì„¸ ê°œ ìˆ«ì ì…ë ¥: ");
 		scanf("%hu %hu %hu", &usrNums[0], &usrNums[1], &usrNums[2]);
 
 		for (i = 0; i < 3; i++)
@@ -102,18 +102,23 @@ int main()
 			}
 		}
 
-		printf("\n%d¹øÂ° µµÀü °á°ú: ", ++attemp);
-		printf("%d ½ºÆ®¶óÀÌÅ©! %d º¼!\n", strike, ball);
+		printf("\n%dë²ˆì§¸ ë„ì „ ê²°ê³¼: ", ++attemp);
+		printf("%d ìŠ¤íŠ¸ë¼ì´í¬! %d ë³¼!\n", strike, ball);
 		if (strike >= 3)
 		{
 			break;
 		}
 	}
-	printf("\n\n\n³¡!");
+	printf("\n\n\në!");
 }
 ```
 
-# ½ÇÇà °á°ú
-## µµÀü 3
-## µµÀü 4
-## µµÀü 6
+# ì‹¤í–‰ ê²°ê³¼
+## ë„ì „ 3
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/76163207-ffa7-453a-a1d1-f6a53ee7002b" />
+
+## ë„ì „ 4
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/6d65d159-6991-4172-8d6a-f2dae0a16695" />
+
+## ë„ì „ 6
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/4f46cc8f-d947-43a3-8b44-94676649f258" />
