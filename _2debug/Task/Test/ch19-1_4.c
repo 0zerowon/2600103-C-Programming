@@ -41,11 +41,11 @@ int main()
 	unsigned short comNums[3] = { 0 };
 	unsigned short usrNums[3] = { 0 };
 	unsigned short strike, ball, attemp = 0;
+	bool isDuplicate = false;
 
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < 3; i++)
 	{
-		bool isDuplicate = 0;
 		do
 		{
 			comNums[i] = rand() % 10;
@@ -63,7 +63,7 @@ int main()
 	}
 
 	printf("숫자 야구!\n\n");
-	while (1)
+	while (true)
 	{
 		strike = 0;
 		ball = 0;
