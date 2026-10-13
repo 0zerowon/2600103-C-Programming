@@ -1,23 +1,23 @@
-﻿- 아래쪽 실행결과처럼 나오도록 문자 입출력(scanf(“%c”,…)) 방식을 이용하여 코드를 수정하시오. 
-- 엔터키(‘\n’)가 나올 때까지 문자를 하나씩 배열에 복사하고 마지막에 널문자를 대입한다.
+- �Ʒ��� ������ó�� �������� ���� �����(scanf("%c",��)) ����� �̿��Ͽ� �ڵ带 �����Ͻÿ�. 
+- ����Ű('\n')�� ���� ������ ���ڸ� �ϳ��� �迭�� �����ϰ� �������� �ι��ڸ� �����Ѵ�.
 
 ```c
-#include<stdio.h>
-intmain(void)
+#include <stdio.h>
+int main(void)
 {
-charstr[20]; 
-printf(“문자열을입력하시오:”);
-scanf(“%s”, str); 
-printf(“문자열: %s\n”, str);
-return0;
+	char str[20]; 
+	printf("���ڿ��� �Է��Ͻÿ�:");
+	scanf("%s", str); 
+	printf("���ڿ�: %s\n", str);
+	return 0;
 }
 ```
 
 ```
-문자열을 입력하시오: Helloworld\n
-문자열:Hello
+���ڿ��� �Է��Ͻÿ�: Hello world\n
+���ڿ�: Hello
 ```
 ```
-문자열을 입력하시오: Helloworld\n
-문자열:Helloworld
+���ڿ��� �Է��Ͻÿ�: Hello world\n
+���ڿ�: Hello world
 ```
