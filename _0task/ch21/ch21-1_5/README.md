@@ -14,10 +14,10 @@ return0;
 ```
 
 ```
-문자열을 입력하시오 :Helloworld<엔터>
+문자열을 입력하시오: Helloworld\n
 문자열:Hello
 ```
 ```
-문자열을 입력하시오 :Helloworld<엔터>
+문자열을 입력하시오: Helloworld\n
 문자열:Helloworld
 ```
