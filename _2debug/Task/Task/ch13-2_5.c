@@ -1,4 +1,4 @@
-ï»¿#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -7,7 +7,7 @@ int main()
 
 	int n = sizeof(fruits) / sizeof(fruits[0]);
 
-	for (int i = 0; i < n-1; i++)
+	for (int i = 0; i < n; i++)
 	{
 		if(fruits[i][0] < firstString[0])
 		{
@@ -15,5 +15,5 @@ int main()
 		}
 	}
 	
-	printf("ì‚¬ì „ìˆœìœ¼ë¡œ ê°€ìž¥ ì•žì— ì˜¤ëŠ” ë¬¸ìžì—´: %s", firstString);
+	printf("»çÀü¼øÀ¸·Î °¡Àå ¾Õ¿¡ ¿À´Â ¹®ÀÚ¿­: %s", firstString);
 }
