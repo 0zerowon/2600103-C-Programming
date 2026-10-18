@@ -18,5 +18,13 @@
     <ClCompile Include="cmidtest26.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="study-mid-test.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\ex\중간고사문제_251018-261015.pdf">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
