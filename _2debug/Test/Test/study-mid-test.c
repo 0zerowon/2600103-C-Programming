@@ -560,7 +560,7 @@ int main()
 //{
 //	int arr[8] = { -3,4,7,-8,10,15,-2,6 };
 //	int (*fp)(int) = is_even;
-//	
+//
 //	printf("짝수 개수: %d\n", count_if(arr, 8, fp));
 //	fp = is_neg;
 //	printf("음수 개수: %d\n", count_if(arr, 8, fp));
@@ -732,3 +732,183 @@ int main()
 //}
 */
 
+//void get_str(char** p, int len);
+//int get_strlen(char* p);
+//
+//int main()
+//{
+//	char str[3][50];
+//	char* parr[3] = { &str[0][0],&str[1][0],&str[2][0] };
+//	int i, cnt = 0;
+//
+//	get_str(parr, 3);
+//	for (int i = 0; i < 3; i++)
+//	{
+//		cnt = get_strlen(parr[i]);
+//		printf("%d길이:%d\n", i + 1, cnt);
+//	}
+//}
+//
+//void get_str(char** p, int len)
+//{
+//	for (int i = 0; i < len; i++)
+//	{
+//		printf("%d", i + 1);
+//		scanf("%s", p[i]);
+//	}
+//}
+//
+//int get_strlen(char* p)
+//{
+//	int i;
+//	for (i = 0; p[i] != '\0'; i++)
+//	{
+//
+//	}
+//	return i;
+//}
+
+//void prin(char** p, int c);
+//char* get_fir(char** p, int c);
+//
+//int main()
+//{
+//	char* parr[] = { "ti","li","squ","ea" };
+//	char* p;
+//	int cnt = sizeof(parr) / sizeof(parr[0]);
+//
+//	prin(parr, cnt);
+//	p = get_fir(parr, cnt);
+//	printf(":%s\n", p);
+//}
+//
+//void prin(char** p, int c)
+//{
+//	for (int i = 0; i < c; i++)
+//	{
+//		printf("%s\n", &p[i][0]);
+//	}
+//}
+//
+//char* get_fir(char** p, int c)
+//{
+//	char* f = p[0];
+//	for (int i = 1; i < c; i++)
+//	{
+//		if (*f > *p[i])
+//		{
+//			f = p[i];
+//		}
+//	}
+//	return f;
+//}
+
+//int big(int a, int b);
+//int small(int a, int b);
+//int get_val(int* a, int (*fp)(int, int));
+//
+//int main()
+//{
+//	int arr[4] = { 2,-1,10,3 };
+//	int res;
+//	
+//	res = get_val(arr, big);
+//	printf("최대값:%d\n", res);
+//	res = get_val(arr, small);
+//	printf("최소:%d", res);
+//
+//}
+//
+//int big(int a, int b)
+//{
+//	if (a > b)
+//	{
+//	return 0;
+//
+//	}
+//	else
+//	{
+//		return 1;
+//	}
+//}
+//
+//int small(int a, int b)
+//{
+//	if (a < b)
+//	{
+//		return 0;
+//
+//	}
+//	else
+//	{
+//		return 1;
+//	}
+//}
+//
+//int get_val(int* a, int(*fp)(int, int))
+//{
+//	int n = a[0];
+//
+//	for (int i = 0; i < 4; i++)
+//	{
+//		if (fp(n, a[i]))
+//		{
+//			n=a[i];
+//		}
+//	}
+//	return n;
+//}
+
+void get_data(double* d, int len);
+void get_stat(double* d, int len, double* s);
+void put_stat(double* s);
+
+int main()
+{
+	double data[5];
+	double stat[3];
+
+	get_data(data, 5);
+	get_stat(data, 5, stat);
+	put_stat(stat);
+}
+
+void get_data(double* d, int len)
+{
+	printf("%d\n",len);
+	for (int i = 0; i < len; i++)
+	{
+		scanf("%lf", &d[i]);
+	}
+
+}
+
+void get_stat(double* d, int len, double* s)
+{
+	double min, max, mean = 0;
+
+	min = max = d[0];
+	for (int i = 0; i < len; i++)
+	{
+		if (min > d[i])
+		{
+			min = d[i];
+		}
+		if (max < d[i])
+		{
+			max = d[i];
+		}
+		mean += d[i];
+	}
+
+	s[0] = min;
+	s[1] = max;
+	s[2] = mean / len;
+}
+
+void put_stat(double* s)
+{
+		printf("%lf\n", s[0]);
+		printf("%lf\n", s[1]);
+		printf("%lf\n", s[2]);
+}
