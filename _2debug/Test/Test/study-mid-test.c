@@ -1,13 +1,13 @@
-// »çÀü¿¡¼­ ¾Õ¿¡ ³ª¿À´Â ¹®ÀÚ´Â ¾Æ½ºÅ° ÄÚµå °ªÀÌ ÀÛÀ½
-// ÇÔ¼öÀÇ ÀÚ·áÇü: ÇÔ¼öÀÚ·áÇü(¸Å°³º¯¼öÀÚ·áÇü, ¸Å°³º¯¼öÀÚ·áÇü)
-// ÇÔ¼ö¸íÀÇ ÀÚ·áÇü: ÇÔ¼öÀÚ·áÇü (*)(¸Å°³º¯¼öÀÚ·áÇü, ¸Å°³º¯¼öÀÚ·áÇü)
-// void Æ÷ÀÎÅÍ´Â °­Á¦Çüº¯È¯ ÈÄ °£Á¢ ÂüÁ¶ ¿¬»ê
+ï»¿// ì‚¬ì „ì—ì„œ ì•ì— ë‚˜ì˜¤ëŠ” ë¬¸ìëŠ” ì•„ìŠ¤í‚¤ ì½”ë“œ ê°’ì´ ì‘ìŒ
+// í•¨ìˆ˜ì˜ ìë£Œí˜•: í•¨ìˆ˜ìë£Œí˜•(ë§¤ê°œë³€ìˆ˜ìë£Œí˜•, ë§¤ê°œë³€ìˆ˜ìë£Œí˜•)
+// í•¨ìˆ˜ëª…ì˜ ìë£Œí˜•: í•¨ìˆ˜ìë£Œí˜• (*)(ë§¤ê°œë³€ìˆ˜ìë£Œí˜•, ë§¤ê°œë³€ìˆ˜ìë£Œí˜•)
+// void í¬ì¸í„°ëŠ” ê°•ì œí˜•ë³€í™˜ í›„ ê°„ì ‘ ì°¸ì¡° ì—°ì‚°
 
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:6031)
 #include <stdio.h>
 
-// ¿¹Á¦
+// ì˜ˆì œ
 
 //int main()
 //{
@@ -36,20 +36,43 @@
 //{
 //	int num = 20;
 //	const int* ptr = &num;
-//	//*ptr = 30; //ÄÄÆÄÀÏ ¿¡·¯
-//	num = 40; //Á¤»ó
+//	//*ptr = 30; //ì»´íŒŒì¼ ì—ëŸ¬
+//	num = 40; //ì •ìƒ
 //}
 //
 //int main()
 //{
 //	int num1 = 20, num2 = 30;
 //	const int* const ptr = &num1;
-//	ptr = &num2; //ÄÄÆÄÀÏ ¿¡·¯
-//	*ptr = 40; //ÄÄÆÄÀÏ ¿¡·¯
+//	ptr = &num2; //ì»´íŒŒì¼ ì—ëŸ¬
+//	*ptr = 40; //ì»´íŒŒì¼ ì—ëŸ¬
+//}
+//
+//void SimpleAdder(int n1, int n2);
+//void ShowString(char* str);
+//int main(void)
+//{
+//	char* str = "Function Pointer";
+//	int num1 = 10, num2 = 20;
+//	void (*fptr1)(int, int) = SimpleAdder;
+//	void (*fptr2)(char*) = ShowString;
+//	SimpleAdder(num1, num2); // í•¨ìˆ˜ í˜¸ì¶œ
+//	ShowString(str);
+//	fptr1(num1, num2); // í•¨ìˆ˜ í¬ì¸í„°ì— ì˜í•œ í˜¸ì¶œ
+//	fptr2(str);
+//	return 0;
+//}
+//void SimpleAdder(int n1, int n2)
+//{
+//	printf("%d + %d = %d \n", n1, n2, n1 + n2);
+//}
+//void ShowString(char* str)
+//{
+//	printf("%s \n", str);
 //}
 
 
-// Æ÷ÀÎÅÍ Ç¥Çö
+// í¬ì¸í„° í‘œí˜„
 
 /*
 int main()
@@ -67,24 +90,24 @@ int main()
 	//		printf("p[1] == %d\n", *(arr + 1));
 	//
 	//	}
-	//	//arr++;	// ¹è¿­ÀÇ ÁÖ¼Ò´Â »ó¼ö¿©¼­ º¯¼öÀÎ Æ÷ÀÎÅÍ¿¡ ÇÒ´çÇÏ°í º¯°æÇØ¾ß ÇÔ
+	//	//arr++;	// ë°°ì—´ì˜ ì£¼ì†ŒëŠ” ìƒìˆ˜ì—¬ì„œ ë³€ìˆ˜ì¸ í¬ì¸í„°ì— í• ë‹¹í•˜ê³  ë³€ê²½í•´ì•¼ í•¨
 	//	int i, n;
 	//	int a = 10, b = 20, c = 30, d = 40, e = 50;
-	//	int* pa[5] = { &a, &b, &c, &d, &e };	// Æ÷ÀÎÅÍ ¹è¿­: ÁÖ¼ÒµéÀ» °®´Â ¹è¿­
-	//	n = sizeof(pa) / sizeof(pa[0]);			// Æ÷ÀÎÅÍ ¹è¿­ ¿ø¼Ò °³¼ö °è»ê: (8*5) / 8 = 5
+	//	int* pa[5] = { &a, &b, &c, &d, &e };	// í¬ì¸í„° ë°°ì—´: ì£¼ì†Œë“¤ì„ ê°–ëŠ” ë°°ì—´
+	//	n = sizeof(pa) / sizeof(pa[0]);			// í¬ì¸í„° ë°°ì—´ ì›ì†Œ ê°œìˆ˜ ê³„ì‚°: (8*5) / 8 = 5
 	//	for (i = 0; i < n; i++)
 	//	{
-	//		printf("%d\n", *pa[i]);				// pa[i]´Â ÁÖ¼Ò: *(pa + i): Æ÷ÀÎÅÍ ¹è¿­ÀÇ ¿ø¼ÒµéÀº ÁÖ¼Òµé
-	//		printf("%d\n", *(*(pa + i)));		// *pa[i]´Â °ª: *(*(pa + i)): Æ÷ÀÎÅÍ ¹è¿­ÀÇ ¿ø¼ÒµéÀº ÁÖ¼Ò´Ï±î ±× ÁÖ¼ÒÀÇ º¯¼ö °ª
+	//		printf("%d\n", *pa[i]);				// pa[i]ëŠ” ì£¼ì†Œ: *(pa + i): í¬ì¸í„° ë°°ì—´ì˜ ì›ì†Œë“¤ì€ ì£¼ì†Œë“¤
+	//		printf("%d\n", *(*(pa + i)));		// *pa[i]ëŠ” ê°’: *(*(pa + i)): í¬ì¸í„° ë°°ì—´ì˜ ì›ì†Œë“¤ì€ ì£¼ì†Œë‹ˆê¹Œ ê·¸ ì£¼ì†Œì˜ ë³€ìˆ˜ ê°’
 	//	}
 	//}
 
 	//{
-	//	char* p = "hello, world";	// ÄÄÆÄÀÏ·¯°¡ ¹è¿­°°Àº ÀÓÀÇÀÇ ¹®ÀÚ¿­ ¹­À½ ¸¸µë
+	//	char* p = "hello, world";	// ì»´íŒŒì¼ëŸ¬ê°€ ë°°ì—´ê°™ì€ ì„ì˜ì˜ ë¬¸ìì—´ ë¬¶ìŒ ë§Œë“¬
 	//	printf("%s\n", p);
-	//	p = "goodbye, world";		// °¡´É: ¶Ç ¹®ÀÚ¿­ ¹­À½À» ¸¸µé¾î¼­ Ã¹ ¹øÂ° ¹®ÀÚ ÁÖ¼Ò ÇÒ´ç
+	//	p = "goodbye, world";		// ê°€ëŠ¥: ë˜ ë¬¸ìì—´ ë¬¶ìŒì„ ë§Œë“¤ì–´ì„œ ì²« ë²ˆì§¸ ë¬¸ì ì£¼ì†Œ í• ë‹¹
 	//	printf("%s\n", p);
-	//	//p[0] = 'G';				// ¿À·ù: *(p + 0)Àº ÀĞ±â¸¸ °¡´ÉÇÏ°í ¼öÁ¤ ºÒ°¡
+	//	//p[0] = 'G';				// ì˜¤ë¥˜: *(p + 0)ì€ ì½ê¸°ë§Œ ê°€ëŠ¥í•˜ê³  ìˆ˜ì • ë¶ˆê°€
 	//	printf("%c", p[0]);
 	//}
 
@@ -103,7 +126,7 @@ int main()
 	//		for (int j = 0; j < 3; j++)
 	//		{
 	//			printf("%5d", arr[i][j]);
-	//			printf(" : %d", &arr[0][0] + 3 * i + j);		// iÇà j¿­ÀÇ ÁÖ¼Ò°ª: ÁÖ¼Ò°ª + (3*i+j) * sizeof(int)
+	//			printf(" : %d", &arr[0][0] + 3 * i + j);		// ií–‰ jì—´ì˜ ì£¼ì†Œê°’: ì£¼ì†Œê°’ + (3*i+j) * sizeof(int)
 	//
 	//		}
 	//		printf("\n");
@@ -113,7 +136,7 @@ int main()
 */
 
 
-// ¹®ÀÚ¿­ ¹è¿­
+// ë¬¸ìì—´ ë°°ì—´
 
 //int main()
 //{
@@ -127,12 +150,12 @@ int main()
 //	for (int i = 0; i < 3; i++)
 //	{
 //		// printf("%s\n", &strs[i][0]);
-//		printf("%s\n", strs[i]);	// ¼­½Ä ÁöÁ¤ÀÚ %s´Â ¹®ÀÚ¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò¸¦ ¹ŞÀ½, ¹è¿­ÀÇ ÀÌ¸§Àº ÁÖ¼Ò(strs[i]): 2Â÷¿ø ¹è¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò´Â iÇà ÀüÃ¼(1Â÷¿ø)
+//		printf("%s\n", strs[i]);	// ì„œì‹ ì§€ì •ì %sëŠ” ë¬¸ìì—´ì˜ ì‹œì‘ ì£¼ì†Œë¥¼ ë°›ìŒ, ë°°ì—´ì˜ ì´ë¦„ì€ ì£¼ì†Œ(strs[i]): 2ì°¨ì› ë°°ì—´ì˜ ì‹œì‘ ì£¼ì†ŒëŠ” ií–‰ ì „ì²´(1ì°¨ì›)
 //	}
 //}
 
 
-// ¸ğÀÇ°í»ç
+// ëª¨ì˜ê³ ì‚¬
 
 /*
 //void get_data(double* d, int len);
@@ -152,7 +175,7 @@ int main()
 //
 //void get_data(double* d, int len)
 //{
-//	printf("5°³ÀÇ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n");
+//	printf("5ê°œì˜ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n");
 //	for (int i = 0; i < len; i++)
 //	{
 //		scanf("%lf", d + i);
@@ -163,7 +186,7 @@ int main()
 //{
 //	double min = *(d + 0), max = *(d + 0), mean = 0.0f;
 //
-//	for (int i = 0; i < len; i++)	// mean ¶§¹®¿¡ 0ºÎÅÍ ½ÃÀÛ
+//	for (int i = 0; i < len; i++)	// mean ë•Œë¬¸ì— 0ë¶€í„° ì‹œì‘
 //	{
 //		if (min > *(d + i))
 //		{
@@ -185,9 +208,9 @@ int main()
 //
 //void put_stat(double* s)
 //{
-//	printf("ÃÖ¼Ò°ªÀº %lfÀÔ´Ï´Ù.\n", *(s + 0));
-//	printf("ÃÖ´ë°ªÀº %lfÀÔ´Ï´Ù.\n", *(s + 1));
-//	printf("Æò±Õ°ªÀº %lfÀÔ´Ï´Ù.\n", *(s + 2));
+//	printf("ìµœì†Œê°’ì€ %lfì…ë‹ˆë‹¤.\n", *(s + 0));
+//	printf("ìµœëŒ€ê°’ì€ %lfì…ë‹ˆë‹¤.\n", *(s + 1));
+//	printf("í‰ê· ê°’ì€ %lfì…ë‹ˆë‹¤.\n", *(s + 2));
 //}
 
 //int big(int a, int b);
@@ -200,10 +223,10 @@ int main()
 //	int res;
 //
 //	res = get_value(arr, big);
-//	printf("ÃÖ´ë°ªÀº: %d\n", res);
+//	printf("ìµœëŒ€ê°’ì€: %d\n", res);
 //
 //	res = get_value(arr, small);
-//	printf("ÃÖ¼Ò°ªÀº: %d\n", res);
+//	printf("ìµœì†Œê°’ì€: %d\n", res);
 //}
 //
 //int big(int a, int b)
@@ -256,7 +279,7 @@ int main()
 //
 //    print_str(ptrArr, cnt);
 //    ptr = get_first(ptrArr, cnt);
-//    printf("»çÀü¿¡¼­ °¡Àå ¾Õ¿¡ ³ª¿À´Â ´Ü¾î: %s\n", ptr);
+//    printf("ì‚¬ì „ì—ì„œ ê°€ì¥ ì•ì— ë‚˜ì˜¤ëŠ” ë‹¨ì–´: %s\n", ptr);
 //}
 //
 //void print_str(char** pA, int c)
@@ -300,7 +323,7 @@ int main()
 //
 //void get_data(double* d, int len)
 //{
-//	printf("%d°³ÀÇ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n", len);
+//	printf("%dê°œì˜ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n", len);
 //	for (int i = 0; i < len; i++)
 //	{
 //		scanf("%lf", &d[i]);
@@ -333,9 +356,9 @@ int main()
 //
 //void put_stat(double* s)
 //{
-//	printf("ÃÖ¼Ò°ªÀº %lfÀÔ´Ï´Ù.\n", s[0]);
-//	printf("ÃÖ´ë°ªÀº %lfÀÔ´Ï´Ù.\n", s[1]);
-//	printf("Æò±ÕÀº %lfÀÔ´Ï´Ù.\n", s[2]);
+//	printf("ìµœì†Œê°’ì€ %lfì…ë‹ˆë‹¤.\n", s[0]);
+//	printf("ìµœëŒ€ê°’ì€ %lfì…ë‹ˆë‹¤.\n", s[1]);
+//	printf("í‰ê· ì€ %lfì…ë‹ˆë‹¤.\n", s[2]);
 //}
 
 //int main()
@@ -343,13 +366,13 @@ int main()
 //	char str[3][10];
 //	int i;
 //
-//	printf("°ø¹é¾øÀÌ 3°³ÀÇ ¹®ÀÚ¿­ ÀÔ·Â:\n");
+//	printf("ê³µë°±ì—†ì´ 3ê°œì˜ ë¬¸ìì—´ ì…ë ¥:\n");
 //	for (i = 0; i < 3; i++)
 //	{
 //		scanf("%s", &str[i][0]);
 //	}
 //
-//	printf("°ø¹é¾øÀÌ 3°³ÀÇ ¹®ÀÚ¿­ Ãâ·Â:\n");
+//	printf("ê³µë°±ì—†ì´ 3ê°œì˜ ë¬¸ìì—´ ì¶œë ¥:\n");
 //	for (i = 0; i < 3; i++)
 //	{
 //		printf("%s\n", str[i]);
@@ -366,10 +389,10 @@ int main()
 //	int res;
 //
 //	res = get_value(arr, big);
-//	printf("ÃÖ´ë°ªÀº: %d\n", res);
+//	printf("ìµœëŒ€ê°’ì€: %d\n", res);
 //
 //	res = get_value(arr, small);
-//	printf("ÃÖ¼Ò°ªÀº: %d\n", res);
+//	printf("ìµœì†Œê°’ì€: %d\n", res);
 //}
 //
 //int big(int a, int b)
@@ -425,7 +448,7 @@ int main()
 //	print_str(ptrArr, cnt);
 //	ptr = get_first(ptrArr, cnt);
 //
-//	printf("»çÀü¿¡¼­ °¡Àå ¾Õ¿¡ ³ª¿À´Â ´Ü¾î: %s\n", ptr);
+//	printf("ì‚¬ì „ì—ì„œ ê°€ì¥ ì•ì— ë‚˜ì˜¤ëŠ” ë‹¨ì–´: %s\n", ptr);
 //}
 //
 //void print_str(char** a, int cnt)
@@ -464,7 +487,7 @@ int main()
 //	for (i = 0; i < 3; i++)
 //	{
 //		cnt = get_strlen(pArr[i]);
-//		printf("%d¹øÂ° ¹®ÀÚ¿­ ±æÀÌ: %d\n", i + 1, cnt);
+//		printf("%dë²ˆì§¸ ë¬¸ìì—´ ê¸¸ì´: %d\n", i + 1, cnt);
 //	}
 //}
 //
@@ -472,7 +495,7 @@ int main()
 //{
 //	for (int i = 0; i < len; i++)
 //	{
-//		printf("%d¹øÂ° ¹®ÀÚ¿­ ÀÔ·Â: ", i + 1);
+//		printf("%dë²ˆì§¸ ë¬¸ìì—´ ì…ë ¥: ", i + 1);
 //		scanf("%s", a[i]);
 //	}
 //}
@@ -508,7 +531,7 @@ int main()
 //
 //void get_data(int* d, int len)
 //{
-//	printf("6ÀÏ°£ÀÇ ¹æ¹®ÀÚ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n");
+//	printf("6ì¼ê°„ì˜ ë°©ë¬¸ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n");
 //	for (int i = 0; i < len; i++)
 //	{
 //		scanf("%d", d + i);
@@ -546,9 +569,9 @@ int main()
 //
 //void put_stat(double* s, int h)
 //{
-//	printf("ÃÖ¼Ò°ªÀº %.0lf\n", s[0]);
-//	printf("ÃÖ´ë°ªÀº %.0lf (%d¹øÂ° ³¯)\n", s[1], h);
-//	printf("Æò±ÕÀº %.2lf\n", s[2]);
+//	printf("ìµœì†Œê°’ì€ %.0lf\n", s[0]);
+//	printf("ìµœëŒ€ê°’ì€ %.0lf (%dë²ˆì§¸ ë‚ )\n", s[1], h);
+//	printf("í‰ê· ì€ %.2lf\n", s[2]);
 //}
 
 //int count_if(int* a, int len, int (*fP)(int));
@@ -561,10 +584,10 @@ int main()
 //	int arr[8] = { -3,4,7,-8,10,15,-2,6 };
 //	int (*fp)(int) = is_even;
 //
-//	printf("Â¦¼ö °³¼ö: %d\n", count_if(arr, 8, fp));
+//	printf("ì§ìˆ˜ ê°œìˆ˜: %d\n", count_if(arr, 8, fp));
 //	fp = is_neg;
-//	printf("À½¼ö °³¼ö: %d\n", count_if(arr, 8, fp));
-//	printf("10 ÀÌ»ó °³¼ö: %d\n", count_if(arr, 8, is_big));
+//	printf("ìŒìˆ˜ ê°œìˆ˜: %d\n", count_if(arr, 8, fp));
+//	printf("10 ì´ìƒ ê°œìˆ˜: %d\n", count_if(arr, 8, is_big));
 //}
 //
 //int count_if(int* a, int len, int(*fP)(int))
@@ -636,8 +659,8 @@ int main()
 //	print_str(ptrarr, count);
 //	ptr = get_last(ptrarr, count);
 //
-//	printf("»çÀü¿¡¼­ °¡Àå µÚ¿¡ ³ª¿À´Â ´Ü¾î: %s\n", ptr);
-//	printf("s·Î ½ÃÀÛÇÏ´Â ´Ü¾îÀÇ °³¼ö:%d\n", count_start(ptrarr, count, 's'));
+//	printf("ì‚¬ì „ì—ì„œ ê°€ì¥ ë’¤ì— ë‚˜ì˜¤ëŠ” ë‹¨ì–´: %s\n", ptr);
+//	printf("së¡œ ì‹œì‘í•˜ëŠ” ë‹¨ì–´ì˜ ê°œìˆ˜:%d\n", count_start(ptrarr, count, 's'));
 //
 //	return 0;
 //
@@ -692,7 +715,7 @@ int main()
 //
 //	{
 //
-//		printf("%d¹ø ÇĞ»ı 4°ú¸ñ Á¡¼ö: ", i + 1);
+//		printf("%dë²ˆ í•™ìƒ 4ê³¼ëª© ì ìˆ˜: ", i + 1);
 //
 //		for (j = 0; j < 4; j++)
 //
@@ -704,9 +727,9 @@ int main()
 //
 //	for (i = 0; i < 3; i++)
 //
-//		printf("%d¹ø ÇĞ»ı ÃÑÁ¡:%d Æò±Õ:%.1lf\n", i + 1, total[i], total[i] / 4.0);
+//		printf("%dë²ˆ í•™ìƒ ì´ì :%d í‰ê· :%.1lf\n", i + 1, total[i], total[i] / 4.0);
 //
-//	printf("ÃÑÁ¡ÀÌ °¡Àå ³ôÀº ÇĞ»ıÀº %d¹øÀÔ´Ï´Ù.\n", best + 1);
+//	printf("ì´ì ì´ ê°€ì¥ ë†’ì€ í•™ìƒì€ %dë²ˆì…ë‹ˆë‹¤.\n", best + 1);
 //
 //	return 0;
 //}
@@ -732,6 +755,7 @@ int main()
 //}
 */
 
+/*
 //void get_str(char** p, int len);
 //int get_strlen(char* p);
 //
@@ -745,7 +769,7 @@ int main()
 //	for (int i = 0; i < 3; i++)
 //	{
 //		cnt = get_strlen(parr[i]);
-//		printf("%d±æÀÌ:%d\n", i + 1, cnt);
+//		printf("%dê¸¸ì´:%d\n", i + 1, cnt);
 //	}
 //}
 //
@@ -813,9 +837,9 @@ int main()
 //	int res;
 //	
 //	res = get_val(arr, big);
-//	printf("ÃÖ´ë°ª:%d\n", res);
+//	printf("ìµœëŒ€ê°’:%d\n", res);
 //	res = get_val(arr, small);
-//	printf("ÃÖ¼Ò:%d", res);
+//	printf("ìµœì†Œ:%d", res);
 //
 //}
 //
@@ -859,56 +883,178 @@ int main()
 //	return n;
 //}
 
-void get_data(double* d, int len);
-void get_stat(double* d, int len, double* s);
-void put_stat(double* s);
+//void get_data(double* d, int len);
+//void get_stat(double* d, int len, double* s);
+//void put_stat(double* s);
+//
+//int main()
+//{
+//	double data[5];
+//	double stat[3];
+//
+//	get_data(data, 5);
+//	get_stat(data, 5, stat);
+//	put_stat(stat);
+//}
+//
+//void get_data(double* d, int len)
+//{
+//	printf("%d\n",len);
+//	for (int i = 0; i < len; i++)
+//	{
+//		scanf("%lf", &d[i]);
+//	}
+//
+//}
+//
+//void get_stat(double* d, int len, double* s)
+//{
+//	double min, max, mean = 0;
+//
+//	min = max = d[0];
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (min > d[i])
+//		{
+//			min = d[i];
+//		}
+//		if (max < d[i])
+//		{
+//			max = d[i];
+//		}
+//		mean += d[i];
+//	}
+//
+//	s[0] = min;
+//	s[1] = max;
+//	s[2] = mean / len;
+//}
+//
+//void put_stat(double* s)
+//{
+//		printf("%lf\n", s[0]);
+//		printf("%lf\n", s[1]);
+//		printf("%lf\n", s[2]);
+//}
+*/
 
-int main()
-{
-	double data[5];
-	double stat[3];
+//int res(int (*fp)(int, int), int a, int b);
+//int add(int a, int b);
+//int mul(int a, int b);
+//int div(int a, int b);
+//
+//int main() {
+//	int num1, num2;
+//	int menu;
+//	int (*p)(int, int);
+//
+//	printf("ì—°ì‚° ì„ íƒ: ");
+//	scanf("%d", &menu);
+//	printf("ì •ìˆ˜ ì…ë ¥: ");
+//	scanf("%d %d", &num1, &num2);
+//
+//	if (menu == 1)
+//	{
+//		p = add;
+//	}
+//	else if (menu == 2)
+//	{
+//		p = mul;
+//	}
+//	else
+//	{
+//		p = div;
+//	}
+//	printf("%d", res(p, num1, num2));
+//}
+//
+//int res(int (*fp)(int, int), int a, int b)
+//{
+//	return fp(a, b);
+//}
+//
+//int add(int a, int b)
+//{
+//	return a + b;
+//}
+//int mul(int a, int b)
+//{
+//	return a * b;
+//}
+//int div(int a, int b)
+//{
+//	return a / b;
+//}
 
-	get_data(data, 5);
-	get_stat(data, 5, stat);
-	put_stat(stat);
-}
+//void get_data(int* d, int len);
+//int get_stat(int* d, int len, int* s);
+//void put_stat(int* s, int i);
+//
+//int main()
+//{
+//	int data[6];
+//	double stat[3];
+//	int idx;
+//	get_data(data, 6);
+//	idx = get_stat(data, 6, stat);
+//	put_stat(stat, idx);
+//}
+//
+//void get_data(int* d, int len)
+//{
+//	printf("6\n");
+//	for (int i = 0; i < len; i++)
+//	{
+//		scanf("%d", &d[i]);
+//	}
+//}
+//
+//int get_stat(int* d, int len, int* s)
+//{
+//	int min, max, mean;
+//	min = max = d[0];
+//	mean = 0;
+//
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (min > d[i])
+//		{
+//			min = d[i];
+//		}
+//		if (max < d[i])
+//		{
+//			max = d[i];
+//		}
+//		mean += d[i];
+//	}
+//
+//	s[0] = min;
+//	s[1] = max;
+//	s[2] = mean / len;
+//}
+//
+//void put_stat(int* s, int i)
+//{
+//	printf("%d\n", s[0]);
+//	printf("%d\n", s[1]);
+//	printf("%d\n", s[2]);
+//}
 
-void get_data(double* d, int len)
-{
-	printf("%d\n",len);
-	for (int i = 0; i < len; i++)
-	{
-		scanf("%lf", &d[i]);
-	}
-
-}
-
-void get_stat(double* d, int len, double* s)
-{
-	double min, max, mean = 0;
-
-	min = max = d[0];
-	for (int i = 0; i < len; i++)
-	{
-		if (min > d[i])
-		{
-			min = d[i];
-		}
-		if (max < d[i])
-		{
-			max = d[i];
-		}
-		mean += d[i];
-	}
-
-	s[0] = min;
-	s[1] = max;
-	s[2] = mean / len;
-}
-
-void put_stat(double* s)
-{
-		printf("%lf\n", s[0]);
-		printf("%lf\n", s[1]);
-		printf("%lf\n", s[2]);
-}
+//int main()
+//{
+//	char str[4][10];
+//
+//	for (int i = 0; i < 4; i++)
+//	{
+//		scanf("%s", &str[i][0]);
+//	}
+//	int i = 0, j=0;
+//	for (i = 0; i < 4; i++)
+//	{
+//		for (j = 0; str[i][j] != '\0'; j++)
+//		{
+//
+//		}
+//	printf("%dë²ˆì§¸ ê¸¸ì´: %d\n", i,j);
+//	}
+//}
