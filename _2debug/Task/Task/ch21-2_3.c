@@ -6,7 +6,6 @@
 //주소 : 군산시 대학로 558
 //자동차번호 : 52어 6746
 
-#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main()
@@ -16,14 +15,14 @@ int main()
 	char carNum[10];
 
 	fputs("이름: ", stdout);
-	fgets(name, sizeof(name), stdin);
-	getchar();
+	//fgets(name, sizeof(name), stdin);
+	gets(name);
 	fputs("주소: ", stdout);
-	fgets(address, sizeof(address), stdin);
-	getchar();
+	//fgets(address, sizeof(address), stdin);
+	gets(address);
 	fputs("자동차 번호: ", stdout);
-	fgets(carNum, sizeof(carNum), stdin);
-	getchar();
+	//fgets(carNum, sizeof(carNum), stdin);
+	gets(carNum);
 
 	fputs("이름: ", stdout);
 	puts(name);
