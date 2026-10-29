@@ -35,5 +35,11 @@
     <ClCompile Include="ch21-2_ex-6.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch21-3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch21-3_ex-1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
