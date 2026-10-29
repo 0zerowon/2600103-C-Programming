@@ -1,25 +1,50 @@
-ï»¿- ì˜ˆì œ 1ë²ˆê³¼ ë™ì¼í•˜ê²Œ ë™ì‘í•˜ë„ë¡ my_strlen í•¨ìˆ˜ë¥¼ ì‘ì„±í•˜ë¼.
-- ë„ë¬¸ìë¥¼ ë§Œë‚  ë•Œê¹Œì§€ ë¬¸ìì˜ ê°œìˆ˜ë¥¼ ì¹´ìš´íŠ¸í•œë‹¤.
+- ¿¹Á¦ 1¹ø°ú µ¿ÀÏÇÏ°Ô µ¿ÀÛÇÏµµ·Ï my_strlen ÇÔ¼ö¸¦ ÀÛ¼ºÇÏ¶ó.
+- ³Î¹®ÀÚ¸¦ ¸¸³¯ ¶§±îÁö ¹®ÀÚÀÇ °³¼ö¸¦ Ä«¿îÆ®ÇÑ´Ù.
 
 ```c
 #include <stdio.h>
 #include <string.h>
-//my_strlen í•¨ìˆ˜ ì„ ì–¸
+//my_strlen ÇÔ¼ö ¼±¾ğ
+void RemoveBSN(str);
 int main(void)
 {
-char str[100];
-printf("ë¬¸ìì—´ ì…ë ¥: ");
-fgets(str, sizeof(str), stdin);
-printf("ê¸¸ì´: %d, ë‚´ìš©: %s \n", my_strlen(str), str);
-RemoveBSN(str);
-printf("ê¸¸ì´: %d, ë‚´ìš©: %s \n", my_ strlen(str), str);
-return 0;
+	char str[100];
+	printf("¹®ÀÚ¿­ ÀÔ·Â: ");
+	fgets(str, sizeof(str), stdin);
+	printf("±æÀÌ: %d, ³»¿ë: %s\n", my_strlen(str), str);
+	RemoveBSN(str);
+	printf("±æÀÌ: %d, ³»¿ë: %s\n", my_strlen(str), str);
+	return 0;
 }
-//my_strlen í•¨ìˆ˜ ì •ì˜
+//my_strlen ÇÔ¼ö Á¤ÀÇ
+void RemoveBSN(char str[])
+{
+	int len = strlen(str);
+	str[len - 1] = '\0';
+}
 ```
 
 ```
-ë¬¸ìì—´ ì…ë ¥: Good morning<ì—”í„°>
-ê¸¸ì´: 13, ë‚´ìš©: Good morning
-ê¸¸ì´: 12, ë‚´ìš©: Good morning
+¹®ÀÚ¿­ ÀÔ·Â: Good morning\n
+±æÀÌ: 13, ³»¿ë: Good morning
+
+±æÀÌ: 12, ³»¿ë: Good morning
+
 ```
+
+```c
+int my_strlen(char* s)
+{
+	int i = 0;
+	do
+	{
+		i++;
+	} while (s[i] != '\0');
+	
+	return i;
+}
+```
+- ¹®ÀÚ¿­ÀÌ ÀúÀåµÇ¾î ÀÖ´Â ¹è¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò¸¦ ÀÎÀÚ·Î ¹Ş¾Æ ¸Å°³ º¯¼ö·Î ÂüÁ¶
+- ¹®ÀÚ¿­ÀÇ ³¡À» ³ªÅ¸³»´Â ³Î ¹®ÀÚ´Â ¹®ÀÚ¿­ÀÇ ³¡ ¹®ÀÚ°¡ ÇÒ´çµÇ¾î ÀÖ´Â ¿ø¼ÒÀÇ ´ÙÀ½ ¿ø¼ÒÀÌ±â¿¡
+	- ¹İº¹¹®À» ÅëÇØ ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ±× Àü±îÁö i	++;·Î ±æÀÌ¸¦ ±¸ÇÔ
+	- ¹®ÀÚ¿­ ±æÀÌ i¸¦ ¹İÈ¯

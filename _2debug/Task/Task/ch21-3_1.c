@@ -1,27 +1,32 @@
-﻿#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include <string.h>
+
+void NewLineChToSpaceCh(char* str);
 
 int main()
 {
-	char s1[30], s2[10], s3[10];
+	char str1[30] = "", str2[10];
 
 	while (1)
 	{
-		/*fputs("문자열 입력: ", stdout);
-		gets(s1);
-		printf("입력된 문자열: %s\n", s1);
-		if (s1 == "quit")
+		fputs("���ڿ� �Է�: ", stdout);
+		fgets(str2, sizeof(str2), stdin);
+		NewLineChToSpaceCh(str2);
+		strcat(str1, str2);
+		
+		if (!strcmp(str2, "quit "))
 		{
 			break;
 		}
-		fputs("문자열 입력: ", stdout);
-		gets(s2);
-		printf("입력된 문자열: %s\n", s2);
-		strcmp(s1, s2);
-		fputs("문자열 입력: ", stdout);
-		gets(s3);
-		strcmp(s1, s3);
-		printf("입력된 문자열: %s\n", s1);*/
+		printf("�Էµ� ���ڿ�: %s\n", str1);
 	}
 
+}
+
+void NewLineChToSpaceCh(char* str)
+{
+	int len = strlen(str);
+
+	str[len - 1] = ' ';
 }

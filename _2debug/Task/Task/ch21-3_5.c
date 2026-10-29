@@ -1,35 +1,35 @@
-ï»¿#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 int main()
 {
-	char* strs[5][10];
-	int firstStrIdx, lastStrIdx;
-	int cmp;
+	char strs[5][10];
+	int firstStrIdx = 0, lastStrIdx = 0;
+	int cmpRes = 0;
 
 	for (int i = 0; i < 5; i++)
 	{
-		fputs("ë¬¸ìžì—´ ìž…ë ¥: ", stdout);
-		gets(strs[i]);
+		fputs("¹®ÀÚ¿­ ÀÔ·Â: ", stdout);
+		fgets(strs[i], sizeof(strs[i]), stdin);
+		int j = strlen(strs[i]);
+		strs[i][j - 1] = '\0';
 	}
 
-	firstStrIdx = lastStrIdx = 0;
-	
-	for (int i = 1; i < 4; i++)
+	for (int i = 1; i < 5; i++)
 	{
-		cmp = strcmp(strs[firstStrIdx], strs[i]);
-		if (cmp < 0)
+		cmpRes = strcmp(strs[firstStrIdx], strs[i]);
+		if (cmpRes > 0)
 		{
 			firstStrIdx = i;
 		}
 
-		cmp = strcmp(strs[lastStrIdx], strs[i]);
-		if (cmp > 0)
+		cmpRes = strcmp(strs[lastStrIdx], strs[i]);
+		if (cmpRes < 0)
 		{
 			lastStrIdx = i;
 		}
 	}
 
-	printf("ì œì¼ ì•ž: %s\n", *strs[firstStrIdx]);
-	printf("ì œì¼ ë’¤: %s\n", *strs[lastStrIdx]);
+	printf("Á¦ÀÏ ¾Õ: %s\n", strs[firstStrIdx]);
+	printf("Á¦ÀÏ µÚ: %s\n", strs[lastStrIdx]);
 }

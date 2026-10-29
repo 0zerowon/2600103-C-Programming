@@ -1,13 +1,13 @@
-ï»¿#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 int my_strlen(char* s);
 int main(void)
 {
 	char str[100];
-	printf("ë¬¸ìì—´ ì…ë ¥: ");
+	printf("¹®ÀÚ¿­ ÀÔ·Â: ");
 	fgets(str, sizeof(str), stdin);
-	printf("ê¸¸ì´: %d, ë‚´ìš©: %s \n", my_strlen(str), str);
-	printf("ê¸¸ì´: %d, ë‚´ìš©: %s \n", my_strlen(str) -1, str);
+	printf("±æÀÌ: %d, ³»¿ë: %s\n", my_strlen(str), str);
+	printf("±æÀÌ: %d, ³»¿ë: %s\n", my_strlen(str) -1, str);
 	return 0;
 }
 
