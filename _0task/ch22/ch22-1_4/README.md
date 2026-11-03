@@ -45,11 +45,21 @@ int main()
 ```
 - fputs 함수를 호출하여 "좌측 상단의 좌표 입력: "을 표준 출력 스트림으로 출력
 - scanf 함수를 호출하여 좌측 상단의 좌표를 입력 받아 leftTopPoint 변수의 멤버 변수 x 초기화
+```c
 	fputs("우측 하단의 좌표 입력: ", stdout);
 	scanf("%d %d", &rightBottomPoint.x, &rightBottomPoint.y);
-
+```
+- fputs 함수를 호출하여 "우측 하단의 좌표 입력: " 표준 스트림으로 출력
+```c
 	printf("사각형의 폭: %d\n", rightBottomPoint.x - leftTopPoint.x);
 	printf("사각형의 높이: %d\n", rightBottomPoint.y - leftTopPoint.y);
+```
+- printf 함수를 호출하여 "사각형의 폭: " 출력
+	- '%d' == rightBottomPoint.x - leftTopPoint.x
+		- 사각형의 폭: 오른쪽 하단의 점 좌표 - 왼쪽 상단의 점 좌표
+- printf 함수를 호출하여 "사각형의 높이: " 출력
+	- '%d' == rightBottomPoint.y - leftTopPoint.y
+		- 사각형의 높이: 오른쪽 하단의 점 좌표 - 왼쪽 상단의 점 좌표
 }
 ```
 
