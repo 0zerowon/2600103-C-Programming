@@ -5,7 +5,7 @@ struct UserInfo
 {
 	int classId;
 	char name[10];
-	char adress[20];
+	char adress[18];
 };
 
 int main()
@@ -21,10 +21,12 @@ int main()
 	getchar();
 
 	fputs("주소를 입력하시오: ", stdout);
-	gets(usrInfo.adress);
+	fgets(usrInfo.adress, sizeof(usrInfo.adress), stdin);
+	getchar();
 
+	putchar('\n');
 	printf("1. 학번: %d\n", usrInfo.classId);
 	printf("2. 이름: %s\n", usrInfo.name);
 	fputs("3. 주소: ", stdout);
-	puts(usrInfo.adress);
+	fputs(usrInfo.adress, stdout);
 }
