@@ -24,3 +24,22 @@ int main(void)
 교환 후 P1의 좌표: (20,20)
 교환 후 P2의 좌표: (10,10)
 ```
+
+```c
+	int tmpX, tmpY;
+	tmpX = p1.x;
+	tmpY = p1.y;
+	p1.x = p2.x;
+	p1.y = p2.y;
+	p2.x = tmpX;
+	p2.y = tmpY;
+```
+- 구조체 변수 p1의 멤버 변수 x, y의 값으로 초기화하여
+	- p2의 x, y에 대입할
+		- tmpX, tmpY 선언
+- p1의 x의 값으로 tmpX을 초기화
+- p1의 y의 값으로 tmpY을 초기화
+- p1의 x를 p2의 x로 대입
+- p1의 y를 p2의 y로 대입
+- p2의 x를 tmpX로 대입
+- p2의 y를 tmpY로 대입

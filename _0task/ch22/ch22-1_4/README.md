@@ -8,3 +8,49 @@
 사각형의 폭: 20
 사각형의 높이: 30
 ```
+
+# 소스 코드 설명
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
+#include <stdio.h>
+```
+- 표준 입출력 함수를 사용하기 위해
+	- 보안 경고 무시
+	- 반환 값 처리 경고 무시
+	- 표준 입출력 라이브러리 헤더 파일 포함
+```c
+struct Point
+{
+	int x;
+	int y;
+};
+```
+- 2차원 점의 좌표를 저장할 구조체 정의
+	- int형 멤버 변수 선언
+		- 사각형의 좌측 상단의 좌표로 사용할 x
+		- 사각형의 우측 하단의 좌표로 사용할 y
+```
+int main()
+{
+```
+- main 함수 정의
+```c
+	struct Point leftTopPoint, rightBottomPoint;
+```
+- 구조체 Point 변수 leftTopPoint, rightBottomPoint 선언
+```c
+	fputs("좌측 상단의 좌표 입력: ", stdout);
+	scanf("%d %d", &leftTopPoint.x, &leftTopPoint.y);
+```
+- fputs 함수를 호출하여 "좌측 상단의 좌표 입력: "을 표준 출력 스트림으로 출력
+- scanf 함수를 호출하여 좌측 상단의 좌표를 입력 받아 leftTopPoint 변수의 멤버 변수 x 초기화
+	fputs("우측 하단의 좌표 입력: ", stdout);
+	scanf("%d %d", &rightBottomPoint.x, &rightBottomPoint.y);
+
+	printf("사각형의 폭: %d\n", rightBottomPoint.x - leftTopPoint.x);
+	printf("사각형의 높이: %d\n", rightBottomPoint.y - leftTopPoint.y);
+}
+```
+
+# 실행 결과
