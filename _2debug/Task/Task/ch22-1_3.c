@@ -1,5 +1,7 @@
-ï»¿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
+#include <string.h>
 
 struct MyCar
 {
@@ -11,15 +13,28 @@ struct MyCar
 int main()
 {
 	struct MyCar car;
+	char buffer[10];
 
-	fputs("ëª¨ë¸ì„ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
-	gets(car.modelName);
-	fputs("ë²ˆí˜¸íŒì„ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
-	gets(car.number);
-	fputs("ì£¼í–‰ ê±°ë¦¬ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
+	fputs("¸ğµ¨À» ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
+	/*gets(buffer);
+	struct MyCar car = { buffer, "", 0 };*/		// ³í¸®Àû ¿À·ù
+	//gets(car.modelName);
+	gets(buffer);
+	for (int i = 0; i < sizeof(buffer); i++)
+	{
+		car.modelName[i] = buffer[i];
+	}
+
+	fputs("¹øÈ£ÆÇÀ» ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
+	//gets(car.number);
+	gets(buffer);
+	strcpy(car.number, buffer);
+
+	fputs("ÁÖÇà °Å¸®¸¦ ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
 	scanf("%d", &car.distance);
 
-	printf("1. ëª¨ë¸: %s\n", car.modelName);
-	printf("2. ë²ˆí˜¸íŒ: %s\n", car.number);
-	printf("3. ì£¼í–‰ ê±°ë¦¬: %dkm\n", car.distance);
+	putchar('\n');
+	printf("1. ¸ğµ¨: %s\n", car.modelName);
+	printf("2. ¹øÈ£ÆÇ: %s\n", car.number);
+	printf("3. ÁÖÇà °Å¸®: %dkm\n", car.distance);
 }

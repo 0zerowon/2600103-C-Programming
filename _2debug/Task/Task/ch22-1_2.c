@@ -1,4 +1,5 @@
-ï»¿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 struct UserInfo
@@ -12,21 +13,21 @@ int main()
 {
 	struct UserInfo usrInfo;
 
-	fputs("í•™ë²ˆì„ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
+	fputs("ÇĞ¹øÀ» ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
 	scanf("%d", &usrInfo.classId);
-	getchar();
 
-	fputs("ì´ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
+	fputs("ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
 	scanf("%s", usrInfo.name);
 	getchar();
 
-	fputs("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ", stdout);
-	fgets(usrInfo.adress, sizeof(usrInfo.adress), stdin);
-	getchar();
+	fputs("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ½Ã¿À: ", stdout);
+	//fgets(usrInfo.adress, sizeof(usrInfo.adress), stdin);
+	//getchar();
+	gets(usrInfo.adress);
 
 	putchar('\n');
-	printf("1. í•™ë²ˆ: %d\n", usrInfo.classId);
-	printf("2. ì´ë¦„: %s\n", usrInfo.name);
-	fputs("3. ì£¼ì†Œ: ", stdout);
+	printf("1. ÇĞ¹ø: %d\n", usrInfo.classId);
+	printf("2. ÀÌ¸§: %s\n", usrInfo.name);
+	fputs("3. ÁÖ¼Ò: ", stdout);
 	fputs(usrInfo.adress, stdout);
 }
