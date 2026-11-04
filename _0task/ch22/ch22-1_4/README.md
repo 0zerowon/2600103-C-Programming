@@ -60,7 +60,9 @@ int main()
 - printf 함수를 호출하여 "사각형의 높이: " 출력
 	- '%d' == rightBottomPoint.y - leftTopPoint.y
 		- 사각형의 높이: 오른쪽 하단의 점 좌표 - 왼쪽 상단의 점 좌표
+```c
 }
 ```
 
 # 실행 결과
+<img width="632" height="156" alt="image" src="https://github.com/user-attachments/assets/28e2dead-7e21-45c4-b71c-9aa13aea086e" />
