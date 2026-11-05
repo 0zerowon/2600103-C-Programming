@@ -11,3 +11,6 @@
 
 이름은 임꺽정, 점수는 75점
 ```
+
+# 실행 결과
+<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/936c99f2-0329-428f-abeb-7565fdecdbec" />
