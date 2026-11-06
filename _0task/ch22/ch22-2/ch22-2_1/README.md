@@ -101,3 +101,4 @@ int main()
 - main 함수 종료
 
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/a6bb62bb-e31d-4d8e-b24b-d62711c10dd5" />
