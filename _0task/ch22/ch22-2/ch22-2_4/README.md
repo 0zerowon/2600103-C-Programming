@@ -76,3 +76,6 @@ int main()
 ```
 - main 함수 종료
 # 실행 결과
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/93421004-e3e4-4c8b-83b2-bf61a3099b67" />
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/450b6410-42f4-4364-95e6-be743b42461b" />
+
