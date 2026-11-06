@@ -13,10 +13,11 @@ int main(void)
 {
 	struct student arr[3];
 	struct student* pArr = arr;
+	int arrLen = sizeof(arr) / sizeof(arr[0]);
 	int ResFirstNameStrcmp;
 	int IdxFirstName = 0;
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < arrLen; i++)
 	{
 		fputs("이름을 입력하시오: ", stdout);
 		gets((pArr + i)->name);

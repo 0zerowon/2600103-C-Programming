@@ -12,10 +12,11 @@ struct student
 int main(void)
 {
 	struct student arr[3];
-	int ResFirstNameStrcmp;
-	int IdxFirstName = 0;
+	int arrLen = sizeof(arr) / sizeof(arr[0]);
+	int firstNameStrcmpRes;
+	int firstNameIdx = 0;
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < arrLen; i++)
 	{
 		fputs("이름을 입력하시오: ", stdout);
 		gets(arr[i].name);
@@ -24,14 +25,14 @@ int main(void)
 		scanf("%d", &arr[i].score);
 		getchar();
 
-		ResFirstNameStrcmp = strcmp(arr[IdxFirstName].name, arr[i].name);
-		if (ResFirstNameStrcmp > 0)
+		firstNameStrcmpRes = strcmp(arr[firstNameIdx].name, arr[i].name);
+		if (firstNameStrcmpRes > 0)
 		{
-			IdxFirstName = i;
+			firstNameIdx = i;
 		}
 
 	}
 
 	putchar('\n');
-	printf("이름은 %s, 점수는 %d", arr[IdxFirstName].name, arr[IdxFirstName].score);
+	printf("이름은 %s, 점수는 %d", arr[firstNameIdx].name, arr[firstNameIdx].score);
 }
