@@ -15,7 +15,7 @@
 
 이름은 임꺽정, 점수는 75점
 ```
-``
+
 # 소스 코드 설명
 ```c
 #define _CRT_SECURE_NO_WARNINGS
