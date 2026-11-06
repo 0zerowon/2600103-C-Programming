@@ -12,7 +12,7 @@
 이름은 임꺽정, 점수는 75점
 ```
 # 소스 코드 설명
-- 전반적인 논리는 2번 설명 링크와 같음
+- 전반적인 코드 논리는 [ch22-2_2 README.md](https://github.com/0zerowon/2600103-C-Programming/blob/main/_0task/ch22/ch22-2/ch22-2_2/README.md#%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EC%84%A4%EB%AA%85)와 같음
 ```c
 	struct student* pArr = arr;
 ```
