@@ -214,3 +214,4 @@ int main()
 - main 함수 종료
 
 # 실행 결과
+<img width="1920" height="1040" alt="image" src="https://github.com/user-attachments/assets/fa893dd1-bcaf-4bfc-a699-9f3b5fd94382" />
