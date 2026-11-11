@@ -17,15 +17,12 @@ ST get_first(ST* s);
 int main()
 {
 	ST s[3];
-	ST s1;
-	//int firstIdx;
+	ST firstNameS;
 
 	get_data(s);
-	//firstIdx = get_first(s);
+	firstNameS = get_first(s);
 
-	//printf("제일 앞에 나오는 이름은 %s, 점수는 %d", s[firstIdx].name, s[firstIdx].score);
-	s1 = get_first(s);
-	printf("%s, %d", s1.name,s1.score);
+	printf("제일 앞에 나오는 이름은 %s, 점수는 %d", firstNameS.name, firstNameS.score);
 }
 
 void get_data(ST* s)
@@ -41,28 +38,20 @@ void get_data(ST* s)
 
 ST get_first(ST* s)
 {
-	int f = 0;
-	//int res;
-
-	/*for (int i = 1; i < 3; i++)
-	{
-		res = strcmp(s[f].name, s[i].name);
-		if (res > 0)
-		{
-			f = i;
-		}
-	}
-	return f;*/
+	ST f;
+	int cmpRes;
+	int firstIdx = 0;
 
 	for (int i = 1; i < 3; i++)
 	{
-		if (s[f].score < s[i].score)
+		cmpRes = strcmp(s[firstIdx].name, s[i].name);
+		if (cmpRes > 0)
 		{
-			f = i;
+			firstIdx = i;
 		}
 	}
 
-	ST s1 = s[f];
+	f = s[firstIdx];
 
-	return s1;
+	return f;
 }

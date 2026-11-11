@@ -64,7 +64,7 @@
     <ClCompile Include="ch23-1_2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ch23-1_3-1.c" />
+    <ClCompile Include="ch23-1_3.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
