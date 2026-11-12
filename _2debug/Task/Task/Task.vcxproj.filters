@@ -66,10 +66,10 @@
     <ClCompile Include="ch23-2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ch23-2_3.c">
+    <ClCompile Include="ch23-2_3,4,5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ch23-2_4.c">
+    <ClCompile Include="ch23-2_6.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
