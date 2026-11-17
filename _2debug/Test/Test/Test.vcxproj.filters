@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\ex\중간고사문제_251018-261015.pdf">
-      <Filter>리소스 파일</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="ch21-1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -65,5 +60,22 @@
     <ClCompile Include="ch23-1_6-1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch24-1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-1_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-1_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-1_4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>
