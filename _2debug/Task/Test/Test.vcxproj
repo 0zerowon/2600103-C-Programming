@@ -163,10 +163,16 @@
     <ClCompile Include="ch22-1_5.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ch24-2_4.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\_0task\ch14\ch14-2\ch14-2_2\README.md" />
     <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="people.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

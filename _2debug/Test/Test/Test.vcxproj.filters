@@ -81,10 +81,25 @@
     <ClCompile Include="..\..\Task\Task\ch23-2_3,4,5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch24-2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-2_4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-2_4-1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch24-2_5,6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt">
       <Filter>리소스 파일</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ch24-2_4" />
   </ItemGroup>
 </Project>

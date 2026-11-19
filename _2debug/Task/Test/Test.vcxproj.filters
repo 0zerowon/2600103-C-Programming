@@ -39,6 +39,9 @@
     <ClCompile Include="ch22-1_5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch24-2_4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\_1lec_pdf\ch12-2_260901.pdf">
@@ -47,5 +50,10 @@
     <None Include="..\..\..\_0task\ch14\ch14-2\ch14-2_2\README.md">
       <Filter>리소스 파일</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="people.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>
