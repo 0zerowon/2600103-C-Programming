@@ -69,6 +69,9 @@
     <ClCompile Include="ch24-2_2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch24-3_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
@@ -80,5 +83,13 @@
     <Text Include="output.txt">
       <Filter>리소스 파일</Filter>
     </Text>
+    <Text Include="a.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="b.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

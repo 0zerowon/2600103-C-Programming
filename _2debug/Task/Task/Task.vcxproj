@@ -70,12 +70,19 @@
     <ClCompile Include="ch24-2_1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ch24-2_2.c" />
+    <ClCompile Include="ch24-2_2.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ch24-3_1.c" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="a.txt" />
     <Text Include="input.txt" />
     <Text Include="output.txt" />
     <Text Include="result.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="b.bin" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
