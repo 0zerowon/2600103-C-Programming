@@ -112,13 +112,16 @@
     <ClCompile Include="ch24-3_1,2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ch24-3_3.c" />
+    <ClCompile Include="ch24-3_3.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ch26-1.c" />
+    <ClCompile Include="ch26-1_ex.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ch24-2_4" />
     <None Include="src.bin" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -72,6 +72,9 @@
     <ClCompile Include="ch24-3_1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch23-1_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
