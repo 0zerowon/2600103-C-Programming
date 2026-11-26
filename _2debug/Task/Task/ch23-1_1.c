@@ -11,29 +11,28 @@ typedef struct Student
 }ST;
 
 void get_data(ST* s);
-void put_data();
+void put_data(ST* s);
 int main()
 {
 	ST s1;
-
 	
-
-	printf("1. 학번: %d\n", s1.id);
-	printf("2. 이름: %s\n", s1.name);
-	printf("3. 학번: %s", s1.address);
-
+	get_data(&s1);
+	get_data(&s1);
 }
 
 void get_data(ST* s)
 {
 	fputs("학번을 입력하시오: ", stdout);
-	scanf("%d", &s1.id);
+	scanf("%d", s->id);
 	fputs("이름을 입력하시오: ", stdout);
-	scanf("%s", s1.name);
+	scanf("%s", &(s->name));
 	fputs("주소를 입력하시오: ", stdout);
-	fgets(s1.address, sizeof(s1.address), stdin);
+	fgets(s->address, sizeof(s->address), stdin);
 }
 
-void put_data()
+void put_data(ST* s)
 {
+	printf("1. 학번: %d\n", s->id);
+	printf("2. 이름: %s\n", s->name);
+	printf("3. 학번: %s", s->address);
 }
